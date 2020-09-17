@@ -1,0 +1,462 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>C1.Win.C1SuperTooltip.4</name>
+  </assembly>
+  <members>
+    <member name="T:C1.Win.C1SuperTooltip.C1SuperLabel">
+      <summary>
+            A label that shows HTML text with rich formatting.
+            </summary>
+      <remarks>
+        <para>The <b>C1SuperLabel</b> control is virtually identical to the 
+            <see cref="T:System.Windows.Forms.Label" /> control, with one significant difference: 
+            <b>C1SuperLabel</b> displays HTML text instead of plain text. This way, your labels can 
+            have multiple fonts, colors, tables, lists, and images.</para>
+        <para>
+          <b>C1SuperLabel</b> does not use IE to render the HTML content. Instead, it has its own 
+            light-weight HTML parser and renderer. This means the output you get will not be always 
+            be 100% compatible with IE (or FireFox), but in most cases it should be close.
+            <b>C1SuperLabel</b> supports cascading style sheets, tables, and most other HTML features.
+            For more details, see the <see cref="P:C1.Win.C1SuperTooltip.C1SuperLabel.Text" /> property.</para>
+      </remarks>
+    </member>
+    <member name="M:C1.Win.C1SuperTooltip.C1SuperLabel.#ctor">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.Win.C1SuperTooltip.C1SuperLabel" /> control.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1SuperTooltip.C1SuperLabel.Text">
+      <summary>
+            Gets or sets the HTML text that is displayed in the control.
+            </summary>
+      <remarks>
+        <para>
+          <see cref="T:C1.Win.C1SuperTooltip.C1SuperLabel" /> can display HTML text, including cascading style sheets,
+            lists, tables, and images. To include images in your tooltips, use an &lt;img&gt; tag as
+            usual, for example:</para>
+        <code>&lt;img src='[resourcename]'/&gt;</code>
+        <para>where <code>[resourcename]</code> is the name of an embedded resource that
+            contains the image. The example below illustrates this.</para>
+      </remarks>
+      <example>
+        <para>The code below uses a <see cref="T:C1.Win.C1SuperTooltip.C1SuperLabel" /> to display a table with some images
+            in it. The images are retrieved from the current application's resources.</para>
+        <code>
+            _c1SuperLabel.Text =
+              "&lt;table&gt;" +
+              "&lt;tr&gt;" +
+              "&lt;td&gt;&lt;img src='newToolStripButton.Image'&gt;" +
+              "&lt;td&gt;This  is the second cell in the top row" +
+              "&lt;tr&gt;" +
+              "&lt;td&gt;&lt;img src='openToolStripButton.Image'&gt;" +
+              "&lt;td&gt;This  is the second cell in the bottom row." +
+              "&lt;/table&gt;";
+            </code>
+      </example>
+    </member>
+    <member name="T:C1.Win.C1SuperTooltip.C1SuperTooltip">
+      <summary>
+            C1SuperTooltip control allows to show tooltips with different visual options and rich html content.
+            </summary>
+      <remarks>
+        <para>The <b>C1SuperTooltip</b> component is virtually identical to the 
+            <see cref="T:System.Windows.Forms.ToolTip" /> component, with one significant difference: 
+            <b>C1SuperTooltip</b> displays HTML text instead of plain text. This way, your tooltips can 
+            have multiple fonts, colors, tables, lists, and images. See the <see cref="M:C1.Win.C1SuperTooltip.C1SuperTooltip.SetToolTip(System.Windows.Forms.Control,System.String)" />
+            method for details and examples.</para>
+        <para>You can associate HTML tooltips with any <see cref="T:System.Windows.Forms.Control" /> or
+            <see cref="T:System.Windows.Forms.ToolStripItem" /> on the form.</para>
+        <para>
+          <b>C1SuperTooltip</b> does not use IE to render the HTML content. Instead, it has its own 
+            light-weight HTML parser and renderer. This means the output you get will not be always 
+            be 100% compatible with IE (or FireFox), but in most cases it should be close.
+            <b>C1SuperTooltip</b> supports cascading style sheets, tables, and most other HTML features.
+            For more details, see the <see cref="M:C1.Win.C1SuperTooltip.C1SuperTooltip.SetToolTip(System.Windows.Forms.Control,System.String)" /> method.</para>
+        <para>The <b>C1SuperTooltip</b> component allows you to provide help to users when they place 
+            the mouse cursor over a control. The <b>C1SuperTooltip</b> component is typically used to 
+            alert users to the intended use of a control. For example, you could specify tooltip 
+            text for a <b>TextBox</b> control that accepts a name, specifying the format of the 
+            name to typed into the control. In addition to providing help, you can also use the 
+            <b>C1SuperTooltip</b> component to provide run time status information. For example, you 
+            could use the <b>C1SuperTooltip</b> component to display connection speed and line quality 
+            data when the user moves the mouse cursor over a <b>PictureBox</b> control that displays 
+            Internet connection status.</para>
+        <para>The <b>C1SuperTooltip</b> component provides properties that enable you to modify how 
+            long and how quickly a tooltip window is displayed. The <see cref="P:C1.Win.C1SuperTooltip.C1SuperTooltipBase.AutoPopDelay" /> 
+            property determines how long a tooltip window is displayed; the <see cref="P:C1.Win.C1SuperTooltip.C1SuperTooltipBase.InitialDelay" /> and 
+            <see cref="P:C1.Win.C1SuperTooltip.C1SuperTooltipBase.ReshowDelay" /> properties determine the delay before a tooltip window is displayed. 
+            To set all of these properties to a consistent pattern, you can use the <see cref="P:C1.Win.C1SuperTooltip.C1SuperTooltipBase.AutomaticDelay" />
+            property. This value is then used to calculate and set the values of the other delay properties.
+            To enable a control's tooltip text to be displayed regardless of whether the <b>Form</b> or 
+            container the control is contained within is enabled, you can use the <b>ShowAlways</b> property.
+            If you want to disable all tooltip text from being displayed in your application, you can 
+            use the <see cref="P:C1.Win.C1SuperTooltip.C1SuperTooltipBase.Active" /> property.</para>
+        <para>The <b>C1SuperTooltip</b> component can be used in any container. To specify a specific 
+            container to use the <b>C1SuperTooltip</b> component within, use the <b>C1SuperTooltip</b> constructor. 
+            In order for tooltip text to be displayed when the user moves the mouse cursor over a control,
+            the tooltip text to be displayed must be associated with the control within an instance of the
+            <b>C1SuperTooltip</b> component. To associate tooltip text with a control, use the <see cref="M:C1.Win.C1SuperTooltip.C1SuperTooltip.SetToolTip(System.Windows.Forms.Control,System.String)" />
+            method. The <b>SetToolTip</b> method can be called more than once for the same control to change
+            the text that is associated with the control. If you want to get the text that is associated 
+            with a control, use the GetToolTip method. To remove all tooltip text 
+            associations with an instance of the <b>C1SuperTooltip</b> component, use the <see cref="M:C1.Win.C1SuperTooltip.C1SuperTooltipBase.RemoveAll" />
+            method.</para>
+      </remarks>
+    </member>
+    <member name="M:C1.Win.C1SuperTooltip.C1SuperTooltip.#ctor">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.Win.C1SuperTooltip.C1SuperTooltip" /> component.
+            </summary>
+    </member>
+    <member name="M:C1.Win.C1SuperTooltip.C1SuperTooltip.#ctor(System.ComponentModel.IContainer)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.Win.C1SuperTooltip.C1SuperTooltip" /> component.
+            </summary>
+      <param name="container">An <see cref="T:System.ComponentModel.IContainer" />that represents the container of the <see cref="T:C1.Win.C1SuperTooltip.C1SuperTooltip" />.</param>
+    </member>
+    <member name="M:C1.Win.C1SuperTooltip.C1SuperTooltip.GetToolTip(System.Windows.Forms.Control)">
+      <summary>
+            Retrieves the <see cref="T:C1.Win.C1SuperTooltip.C1SuperTooltip" /> text associated with the specified control.
+            </summary>
+      <param name="control">The <b>Control</b> for which to retrieve the tooltip text.</param>
+      <returns>The tooltip text for the specified control.</returns>
+      <remarks>
+            This method enables you to retrieve the tooltip text for any control. If the tooltip text 
+            changes dynamically in an application, you can use this method to find out what text is 
+            displayed at any point, depending on the state of the application. To change the text 
+            that a control is displaying, use the <see cref="M:C1.Win.C1SuperTooltip.C1SuperTooltip.SetToolTip(System.Windows.Forms.Control,System.String)" /> method.
+            </remarks>
+    </member>
+    <member name="M:C1.Win.C1SuperTooltip.C1SuperTooltip.GetToolTip(System.Windows.Forms.ToolStripItem)">
+      <summary>
+            Retrieves the <see cref="T:C1.Win.C1SuperTooltip.C1SuperTooltip" /> text associated with the specified <see cref="T:System.Windows.Forms.ToolStripItem" /> component.
+            </summary>
+      <param name="item">The <b>ToolStripItem</b> for which to retrieve the tooltip text.</param>
+      <returns>The tooltip text for the specified <see cref="T:System.Windows.Forms.ToolStripItem" /> component.</returns>
+    </member>
+    <member name="M:C1.Win.C1SuperTooltip.C1SuperTooltip.SetToolTip(System.Windows.Forms.Control,System.String)">
+      <summary>
+            Associates tooltip HTML text with the specified control.
+            <param name="control">The <b>Control</b> to associate the tooltip text with.</param><param name="text">The tooltip text to display when the mouse cursor is over the control.</param></summary>
+      <remarks>
+        <para>In addition to specifying the tooltip text to display for a control, you can also use 
+            this method to modify the tooltip text for a control. Calling the <b>SetToolTip</b> 
+            method more than once for a given control does not specify multiple tooltip text to 
+            display for a control but instead changes the current tooltip text for the control.</para>
+        <para>To determine the tooltip text that is associated with a control at run time, you can 
+            use the <see cref="M:C1.Win.C1SuperTooltip.C1SuperTooltip.GetToolTip(System.Windows.Forms.Control)" /> method.</para>
+        <para>
+          <see cref="T:C1.Win.C1SuperTooltip.C1SuperTooltip" /> can display HTML text, including cascading style sheets,
+            lists, tables, and images. To include images in your tooltips, use an &lt;img&gt; tag as
+            usual, for example:</para>
+        <code>&lt;img src='[resourcename]'/&gt;</code>
+        <para>where <code>[resourcename]</code> is the name of an embedded resource that
+            contains the image. The second example below illustrates this.</para>
+      </remarks>
+      <example>
+            The code below associates an HTML snippet with a <b>ListBox</b> control. The HTML
+            contains two lines of text with some bold words in it.
+            <code>
+            _C1SuperTooltip1.SetToolTip(this.listBox1,
+              "This is a tip &lt;b&gt;with bold&lt;/b&gt; text in it&lt;br&gt;it is also multi-line...");
+            </code>
+            The code below associates an HTML snippet with a <b>RichTextBox</b> control. The HTML
+            contains a table with two columns. The first column contains an image, loaded from the
+            application's resources. In this case, the application must include an embedded resource 
+            named 'tips.gif'. The second column contains some formatted text.
+            <code>
+            _C1SuperTooltip1.SetToolTip(richTextBox1,
+              @"&lt;table&gt;&lt;tr&gt;
+              &lt;td&gt;&lt;img src='tips.gif'/&gt;&lt;/td&gt;
+              &lt;td&gt;This is a multiline&lt;br&gt;tooltip&lt;br&gt;&lt;b&gt;associated
+              &lt;/b&gt;&lt;br&gt;with the rich text box...&lt;/td&gt;
+              &lt;/tr&gt;&lt;/table&gt;");
+            </code></example>
+    </member>
+    <member name="M:C1.Win.C1SuperTooltip.C1SuperTooltip.SetToolTip(System.Windows.Forms.ToolStripItem,System.String)">
+      <summary>
+            Associates tooltip HTML text with the specified <see cref="T:System.Windows.Forms.ToolStripItem" />.
+            </summary>
+      <param name="item">The <b>ToolStripItem</b> to associate the tooltip text with.</param>
+      <param name="text">The tooltip text to display when the mouse cursor is over the control.</param>
+    </member>
+    <member name="P:C1.Win.C1SuperTooltip.C1SuperTooltip.RightToLeft">
+      <summary>
+            Gets or sets a value indicating whether control's elements are aligned to support locales using right-to-left fonts.
+            </summary>
+    </member>
+    <member name="T:C1.Win.C1SuperTooltip.Strings">
+      <summary>
+            Static class containing UI strings used by the designer.
+            </summary>
+    </member>
+    <member name="T:C1.Win.C1SuperTooltip.C1SuperErrorProvider">
+      <summary>
+            Provides a user interface for indicating that a control on a form has an error associated with it.
+            </summary>
+      <remarks>
+        <b>C1SuperErrorProvider</b> presents a mechanism for indicating to the end user that a control
+            on a form has an error associated with it. If an error description string is specified for
+            the control, an icon appears next to the control. The icon flashes in the manner specified
+            by <see cref="P:C1.Win.C1SuperTooltip.C1SuperErrorProvider.BlinkStyle" />, at the rate specified by <see cref="P:C1.Win.C1SuperTooltip.C1SuperErrorProvider.BlinkRate" />. When the mouse hovers over the icon,
+            a <see cref="T:C1.Win.C1SuperTooltip.C1SuperTooltip" /> appears showing the error description as HTML text.
+            </remarks>
+    </member>
+    <member name="M:C1.Win.C1SuperTooltip.C1SuperErrorProvider.#ctor">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.Win.C1SuperTooltip.C1SuperErrorProvider" /> component.
+            </summary>
+    </member>
+    <member name="M:C1.Win.C1SuperTooltip.C1SuperErrorProvider.#ctor(System.ComponentModel.IContainer)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.Win.C1SuperTooltip.C1SuperErrorProvider" /> component.
+            </summary>
+      <param name="container">The <see cref="T:System.ComponentModel.IContainer" /> to monitor for errors.</param>
+    </member>
+    <member name="M:C1.Win.C1SuperTooltip.C1SuperErrorProvider.#ctor(System.Windows.Forms.ContainerControl)">
+      <summary>
+            Initializes a new instance of a <see cref="T:C1.Win.C1SuperTooltip.C1SuperErrorProvider" /> component.
+            </summary>
+      <param name="parentControl">The container of the control to monitor for errors.</param>
+    </member>
+    <member name="M:C1.Win.C1SuperTooltip.C1SuperErrorProvider.Dispose(System.Boolean)">
+      <summary> 
+            Clean up any resources being used.
+            </summary>
+      <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+    </member>
+    <member name="M:C1.Win.C1SuperTooltip.C1SuperErrorProvider.GetError(System.Windows.Forms.Control)">
+      <summary>
+            Returns the current error description text for the specified control.
+            </summary>
+      <param name="control">The item to get the error description text for.</param>
+      <returns>The error description text for the specified control.</returns>
+    </member>
+    <member name="M:C1.Win.C1SuperTooltip.C1SuperErrorProvider.SetError(System.Windows.Forms.Control,System.String)">
+      <summary>
+            Sets the error description text for the specified control.
+            </summary>
+      <param name="control">The control to set the error description text for.</param>
+      <param name="value">The error description text.</param>
+    </member>
+    <member name="M:C1.Win.C1SuperTooltip.C1SuperErrorProvider.GetIconAlignment(System.Windows.Forms.Control)">
+      <summary>
+            Gets a value indicating where the error icon should be placed in relation to the control.
+            </summary>
+      <param name="control">The control to get the icon location for.</param>
+      <returns>One of the ErrorIconAlignment values. The default icon alignment is MiddleRight.</returns>
+    </member>
+    <member name="M:C1.Win.C1SuperTooltip.C1SuperErrorProvider.SetIconAlignment(System.Windows.Forms.Control,System.Windows.Forms.ErrorIconAlignment)">
+      <summary>
+            Sets the location where the error icon should be placed in relation to the control.
+            </summary>
+      <param name="control">The control to set the icon location for.</param>
+      <param name="value">One of the ErrorIconAlignment values.</param>
+    </member>
+    <member name="M:C1.Win.C1SuperTooltip.C1SuperErrorProvider.GetIconPadding(System.Windows.Forms.Control)">
+      <summary>
+            Returns the amount of extra space to leave next to the error icon.
+            </summary>
+      <param name="control">The control to get the padding for.</param>
+      <returns>The number of pixels to leave between the icon and the control.</returns>
+    </member>
+    <member name="M:C1.Win.C1SuperTooltip.C1SuperErrorProvider.SetIconPadding(System.Windows.Forms.Control,System.Int32)">
+      <summary>
+            Sets the amount of extra space to leave between the specified control and the error icon.
+            </summary>
+      <param name="control">The control to set the padding for.</param>
+      <param name="padding">The number of pixels to add between the icon and the control.</param>
+    </member>
+    <member name="P:C1.Win.C1SuperTooltip.C1SuperErrorProvider.Site">
+      <summary>
+            Gets or sets the ISite of the Component.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1SuperTooltip.C1SuperErrorProvider.ContainerControl">
+      <summary>
+            Gets or sets a value indicating the parent control for this <see cref="T:C1.Win.C1SuperTooltip.C1SuperErrorProvider" />.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1SuperTooltip.C1SuperErrorProvider.ToolTip">
+      <summary>
+            Gets or sets the associated <see cref="T:C1.Win.C1SuperTooltip.C1SuperTooltip" /> component displaying the error description text.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1SuperTooltip.C1SuperErrorProvider.DataSource">
+      <summary>
+            Gets or sets the data source that the <see cref="T:C1.Win.C1SuperTooltip.C1SuperErrorProvider" /> monitors.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1SuperTooltip.C1SuperErrorProvider.DataMember">
+      <summary>
+            Gets or sets the list within a data source to monitor.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1SuperTooltip.C1SuperErrorProvider.Icon">
+      <summary>
+            Gets or sets the Icon that is displayed next to a control when an error description text has been set for the control.
+            </summary>
+      <remarks>
+            The Icon property is used if the <see cref="P:C1.Win.C1SuperTooltip.C1SuperErrorProvider.Image" /> property is empty.
+            </remarks>
+    </member>
+    <member name="M:C1.Win.C1SuperTooltip.C1SuperErrorProvider.ShouldSerializeIcon">
+      <summary>
+            This member is for internal use only.
+            </summary>
+    </member>
+    <member name="M:C1.Win.C1SuperTooltip.C1SuperErrorProvider.ResetIcon">
+      <summary>
+            This member is for internal use only.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1SuperTooltip.C1SuperErrorProvider.Image">
+      <summary>
+            Gets or sets the Image that is displayed next to a control when an error description text has been set for the control.
+            </summary>
+      <remarks>
+            If the Image is not empty it is used instead of the <see cref="P:C1.Win.C1SuperTooltip.C1SuperErrorProvider.Icon" />.
+            </remarks>
+    </member>
+    <member name="P:C1.Win.C1SuperTooltip.C1SuperErrorProvider.ImageHot">
+      <summary>
+            Gets or sets the Image that appears next to a control when the mouse hovers over the error icon.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1SuperTooltip.C1SuperErrorProvider.Antiphased">
+      <summary>
+            Gets or sets whether the error icon should blink in different phase for various controls.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1SuperTooltip.C1SuperErrorProvider.BlinkCount">
+      <summary>
+            Gets or sets the number of icon blinks when a new error text is set for the control.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1SuperTooltip.C1SuperErrorProvider.BlinkRate">
+      <summary>
+            Gets or sets the rate, in milliseconds, at which the error icon should flash. The default is 250 milliseconds.
+            </summary>
+      <remarks>
+            The error icon flashes at the specified rate. A value of zero sets <see cref="P:C1.Win.C1SuperTooltip.C1SuperErrorProvider.BlinkStyle" /> to NeverBlink.
+            </remarks>
+    </member>
+    <member name="P:C1.Win.C1SuperTooltip.C1SuperErrorProvider.BlinkStyle">
+      <summary>
+            Gets or sets a value indicating when the error icon flashes.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1SuperTooltip.C1SuperErrorProvider.Tag">
+      <summary>
+            Gets or sets an object that contains data about the component.
+            </summary>
+    </member>
+    <member name="E:C1.Win.C1SuperTooltip.C1SuperErrorProvider.IconClick">
+      <summary>
+            Occurs when the error icon is clicked by the mouse.
+            </summary>
+    </member>
+    <member name="M:C1.Win.C1SuperTooltip.C1SuperErrorProvider.OnIconClick(C1.Win.C1SuperTooltip.IconClickEventArgs)">
+      <summary>
+            Raises the <see cref="E:C1.Win.C1SuperTooltip.C1SuperErrorProvider.IconClick" /> event.
+            </summary>
+      <param name="e">
+        <see cref="T:C1.Win.C1SuperTooltip.IconClickEventArgs" /> object that contains the event data.</param>
+    </member>
+    <member name="E:C1.Win.C1SuperTooltip.C1SuperErrorProvider.IconDoubleClick">
+      <summary>
+            Occurs when the error icon is clicked two or more times.
+            </summary>
+    </member>
+    <member name="M:C1.Win.C1SuperTooltip.C1SuperErrorProvider.OnIconDoubleClick(C1.Win.C1SuperTooltip.IconClickEventArgs)">
+      <summary>
+            Raises the <see cref="E:C1.Win.C1SuperTooltip.C1SuperErrorProvider.IconDoubleClick" /> event.
+            </summary>
+      <param name="e">
+        <see cref="T:C1.Win.C1SuperTooltip.IconClickEventArgs" /> object that contains the event data.</param>
+    </member>
+    <member name="M:C1.Win.C1SuperTooltip.C1SuperErrorProvider.BindToDataAndErrors(System.Object,System.String)">
+      <summary>
+            Provides a method to set both the <see cref="P:C1.Win.C1SuperTooltip.C1SuperErrorProvider.DataSource" /> and <see cref="P:C1.Win.C1SuperTooltip.C1SuperErrorProvider.DataMember" /> at run time.
+            </summary>
+      <param name="newDataSource">A data set based on the IList interface to be monitored for errors. Typically, this is a DataSet to be monitored for errors.</param>
+      <param name="newDataMember">A collection within the newDataSource to monitor for errors. Typically, this will be a DataTable.</param>
+      <remarks>
+            To avoid conflicts at run time that can occur when changing <see cref="P:C1.Win.C1SuperTooltip.C1SuperErrorProvider.DataSource" /> and <see cref="P:C1.Win.C1SuperTooltip.C1SuperErrorProvider.DataMember" />,
+            you should use BindToDataAndErrors instead of setting <see cref="P:C1.Win.C1SuperTooltip.C1SuperErrorProvider.DataSource" /> and <see cref="P:C1.Win.C1SuperTooltip.C1SuperErrorProvider.DataMember" /> individually.
+            </remarks>
+    </member>
+    <member name="M:C1.Win.C1SuperTooltip.C1SuperErrorProvider.UpdateBinding">
+      <summary>
+            Provides a method to update the bindings of the <see cref="P:C1.Win.C1SuperTooltip.C1SuperErrorProvider.DataSource" />, <see cref="P:C1.Win.C1SuperTooltip.C1SuperErrorProvider.DataMember" />, and the error text.
+            </summary>
+      <remarks>
+            Typically, you call this method after you have called <see cref="M:C1.Win.C1SuperTooltip.C1SuperErrorProvider.BindToDataAndErrors(System.Object,System.String)" />.
+            </remarks>
+    </member>
+    <member name="M:C1.Win.C1SuperTooltip.C1SuperErrorProvider.Clear">
+      <summary>
+            Removes all error glyphs and clears their settings associated with this component.
+            </summary>
+    </member>
+    <member name="T:C1.Win.C1SuperTooltip.IconClickEventHandler">
+      <summary>
+            Represents the method that will handle the <see cref="E:C1.Win.C1SuperTooltip.C1SuperErrorProvider.IconClick" /> event.
+            </summary>
+      <param name="sender">Object that fired the event.</param>
+      <param name="e">
+        <see cref="T:C1.Win.C1SuperTooltip.IconClickEventArgs" /> object that contains the event data.</param>
+    </member>
+    <member name="T:C1.Win.C1SuperTooltip.IconClickEventArgs">
+      <summary>
+            Provides data for the <see cref="E:C1.Win.C1SuperTooltip.C1SuperErrorProvider.IconClick" /> event.
+            </summary>
+    </member>
+    <member name="M:C1.Win.C1SuperTooltip.IconClickEventArgs.#ctor(System.Windows.Forms.Control,System.String,System.Windows.Forms.MouseButtons,System.Int32,System.Drawing.Point)">
+      <summary>
+            Initializes a new instance of an <see cref="T:C1.Win.C1SuperTooltip.IconClickEventArgs" />.
+            </summary>
+      <param name="control">Control that has an associated error.</param>
+      <param name="error">Error description text.</param>
+      <param name="button">Button that was clicked on the icon.</param>
+      <param name="clicks">Number of times the mouse button was clicked.</param>
+      <param name="location">Location of the mouse in screen coordinates.</param>
+    </member>
+    <member name="P:C1.Win.C1SuperTooltip.IconClickEventArgs.Control">
+      <summary>
+            Gets the control that has an associated error.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1SuperTooltip.IconClickEventArgs.Error">
+      <summary>
+            Gets the error description text.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1SuperTooltip.IconClickEventArgs.Button">
+      <summary>
+            Gets which mouse button was clicked on the icon.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1SuperTooltip.IconClickEventArgs.Clicks">
+      <summary>
+            Gets the number of times the mouse button was clicked.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1SuperTooltip.IconClickEventArgs.Location">
+      <summary>
+            Gets the location of the mouse (in screen coordinates) during the generating event.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1SuperTooltip.IconClickEventArgs.X">
+      <summary>
+            Gets the x-coordinate of the mouse during the generating event.
+            </summary>
+    </member>
+    <member name="P:C1.Win.C1SuperTooltip.IconClickEventArgs.Y">
+      <summary>
+            Gets the y-coordinate of the mouse during the generating event.
+            </summary>
+    </member>
+  </members>
+</doc>

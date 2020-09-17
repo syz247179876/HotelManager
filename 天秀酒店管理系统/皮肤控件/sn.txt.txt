@@ -1,0 +1,9 @@
+使用说明：把控件拖到你的form上，
+只需一行代码，即可实现整个form包括其所有控件的皮肤的更换，
+总共有几十套皮肤供使用，非常方便。省去你设计开发软件皮肤系统的时间和精力。
+全部源代码就一行： skinEngine1.SkinFile = "WaveColor1.ssk"; 
+其中ssk文件为皮肤文件，共几十套。 
+
+如果上面的不行，就设置skinEngine1控件的SkinFile属性，选择相应的皮肤，记得把前面的路径去掉，只要名字即可
+如SkinFile=G:\360Downloads\皮肤控件\皮肤\MP10\MP10.ssk，要将前面部分删掉，只留皮肤名称，即让SkinFile=MP10.ssk;
+

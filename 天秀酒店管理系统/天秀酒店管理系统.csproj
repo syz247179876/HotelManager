@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{23329FB2-4EB0-49EC-BFC6-FA23BAD7B7C4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>天秀酒店管理系统</RootNamespace>
+    <AssemblyName>天秀酒店管理系统</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>picture\图片2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.C1DataExtender.2, Version=2.0.20113.81, Culture=neutral, PublicKeyToken=7c4b5683f80b910e, processorArchitecture=MSIL" />
+    <Reference Include="C1.C1Excel.2, Version=2.0.20191.359, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.C1Pdf.2, Version=2.0.20191.359, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.2, Version=2.0.20191.359, Culture=neutral, PublicKeyToken=944ae1ea0e47ca04" />
+    <Reference Include="C1.Win.4, Version=4.0.20191.359, Culture=neutral, PublicKeyToken=944ae1ea0e47ca04" />
+    <Reference Include="C1.Win.C1Command.2, Version=2.0.20191.359, Culture=neutral, PublicKeyToken=e808566f358766d8" />
+    <Reference Include="C1.Win.C1Command.4, Version=4.0.20191.359, Culture=neutral, PublicKeyToken=e808566f358766d8" />
+    <Reference Include="C1.Win.C1Editor.4, Version=4.0.20191.359, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1FlexGrid.4, Version=4.0.20191.359, Culture=neutral, PublicKeyToken=79882d576c6336da" />
+    <Reference Include="C1.Win.C1Input.2, Version=2.0.20191.359, Culture=neutral, PublicKeyToken=7e7ff60f0c214f9a, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Schedule.4, Version=4.0.20191.359, Culture=neutral, PublicKeyToken=79882d576c6336da" />
+    <Reference Include="C1.Win.C1Schedule.Extended.4, Version=4.0.20191.359, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1SuperTooltip.2, Version=2.0.20191.359, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1SuperTooltip.4, Version=4.0.20191.359, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1TouchToolKit.4, Version=4.0.20191.359, Culture=neutral, PublicKeyToken=5e531fc0479701e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\控件大全\ComponentOne\WinForms Edition\bin\v4.0\C1.Win.C1TouchToolKit.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.Calendar.4, Version=4.0.20191.359, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="IrisSkin2">
+      <HintPath>皮肤控件\IrisSkin2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AnalysisServices.AdomdClient, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\控件大全\ComponentOne\WinForms Edition\Adommd\Microsoft.AnalysisServices.AdomdClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AnalysisServices.SPClient.Interfaces">
+      <HintPath>..\..\..\控件大全\ComponentOne\WinForms Edition\Adommd\Microsoft.AnalysisServices.SPClient.Interfaces.DLL</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.10.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ThoughtWorks.QRCode, Version=1.0.4778.30637, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ThoughtWorks.QRCode.1.1.0\lib\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="QR_code\QR.cs" />
+    <Compile Include="Login.cs" />
+    <Compile Include="MD5.cs" />
+    <Compile Include="mysql.cs" />
+    <Compile Include="manage_view\Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manage_view\Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manage_view\alterpwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manage_view\alterpwd.Designer.cs">
+      <DependentUpon>alterpwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manage_view\Dismiss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manage_view\Dismiss.Designer.cs">
+      <DependentUpon>Dismiss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manage_view\Distribute_pay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manage_view\Distribute_pay.Designer.cs">
+      <DependentUpon>Distribute_pay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manage_view\Manage_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manage_view\Manage_Menu.Designer.cs">
+      <DependentUpon>Manage_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manage_view\Modify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manage_view\Modify.Designer.cs">
+      <DependentUpon>Modify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="manage_view\Staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manage_view\Staff.Designer.cs">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="survice_view\BookInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="survice_view\BookInfo.Designer.cs">
+      <DependentUpon>BookInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="survice_view\Food_order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="survice_view\Food_order.Designer.cs">
+      <DependentUpon>Food_order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="survice_view\LeftRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="survice_view\LeftRoom.Designer.cs">
+      <DependentUpon>LeftRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="survice_view\StayInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="survice_view\StayInfo.Designer.cs">
+      <DependentUpon>StayInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="survice_view\survice_menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="survice_view\survice_menu.Designer.cs">
+      <DependentUpon>survice_menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="survice_view\RoomType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="survice_view\RoomType.Designer.cs">
+      <DependentUpon>RoomType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="天秀酒店管理系统.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="天秀酒店管理系统.Designer.cs">
+      <DependentUpon>天秀酒店管理系统.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="manage_view\Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manage_view\alterpwd.resx">
+      <DependentUpon>alterpwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manage_view\Dismiss.resx">
+      <DependentUpon>Dismiss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manage_view\Distribute_pay.resx">
+      <DependentUpon>Distribute_pay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manage_view\Manage_Menu.resx">
+      <DependentUpon>Manage_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manage_view\Modify.resx">
+      <DependentUpon>Modify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manage_view\Staff.resx">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="survice_view\BookInfo.resx">
+      <DependentUpon>BookInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="survice_view\Food_order.resx">
+      <DependentUpon>Food_order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="survice_view\LeftRoom.resx">
+      <DependentUpon>LeftRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="survice_view\StayInfo.resx">
+      <DependentUpon>StayInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="survice_view\survice_menu.resx">
+      <DependentUpon>survice_menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="survice_view\RoomType.resx">
+      <DependentUpon>RoomType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="天秀酒店管理系统.resx">
+      <DependentUpon>天秀酒店管理系统.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Scripts\jquery.qrcode.min.js.map" />
+    <None Include="Scripts\qrcode.min.js.map" />
+    <None Include="皮肤\Carlmness\Calmness.ssk" />
+    <None Include="皮肤\Carlmness\CalmnessColor1.ssk" />
+    <None Include="皮肤\Carlmness\CalmnessColor2.ssk" />
+    <None Include="皮肤\Carlmness\Thumbs.db" />
+    <None Include="皮肤\Deep\DeepCyan.ssk" />
+    <None Include="皮肤\Deep\DeepGreen.ssk" />
+    <None Include="皮肤\Deep\DeepOrange.ssk" />
+    <None Include="皮肤\Deep\Thumbs.db" />
+    <None Include="皮肤\Diamond\DiamondBlue.ssk" />
+    <None Include="皮肤\Diamond\DiamondGreen.ssk" />
+    <None Include="皮肤\Diamond\Thumbs.db" />
+    <None Include="皮肤\Eighteen\Eighteen.ssk" />
+    <None Include="皮肤\Eighteen\EighteenColor1.ssk" />
+    <None Include="皮肤\Eighteen\EighteenColor2.ssk" />
+    <None Include="皮肤\Eighteen\Thumbs.db" />
+    <None Include="皮肤\Emerald\Emerald.ssk" />
+    <None Include="皮肤\Emerald\EmeraldColor1.ssk" />
+    <None Include="皮肤\Emerald\EmeraldColor2.ssk" />
+    <None Include="皮肤\Emerald\EmeraldColor3.ssk" />
+    <None Include="皮肤\Emerald\Thumbs.db" />
+    <None Include="皮肤\Glass\GlassBrown.ssk" />
+    <None Include="皮肤\Glass\GlassGreen.ssk" />
+    <None Include="皮肤\Glass\GlassOrange.ssk" />
+    <None Include="皮肤\Glass\Thumbs.db" />
+    <None Include="皮肤\Longhorn\Longhorn.ssk" />
+    <None Include="皮肤\Longhorn\Thumbs.db" />
+    <None Include="皮肤\MacOS\MacOS.ssk" />
+    <None Include="皮肤\MacOS\Thumbs.db" />
+    <None Include="皮肤\Midsummer\Midsummer.ssk" />
+    <None Include="皮肤\Midsummer\MidsummerColor1.ssk" />
+    <None Include="皮肤\Midsummer\MidsummerColor2.ssk" />
+    <None Include="皮肤\Midsummer\MidsummerColor3.ssk" />
+    <None Include="皮肤\Midsummer\Thumbs.db" />
+    <None Include="皮肤\MP10\MP10.ssk" />
+    <None Include="皮肤\MP10\Thumbs.db" />
+    <None Include="皮肤\MSN\MSN.ssk" />
+    <None Include="皮肤\MSN\Thumbs.db" />
+    <None Include="皮肤\One\OneBlue.ssk" />
+    <None Include="皮肤\One\OneCyan.ssk" />
+    <None Include="皮肤\One\OneGreen.ssk" />
+    <None Include="皮肤\One\OneOrange.ssk" />
+    <None Include="皮肤\One\Thumbs.db" />
+    <None Include="皮肤\Page\Page.ssk" />
+    <None Include="皮肤\Page\PageColor1.ssk" />
+    <None Include="皮肤\Page\PageColor2.ssk" />
+    <None Include="皮肤\Page\Thumbs.db" />
+    <None Include="皮肤\RealOne\RealOne.ssk" />
+    <None Include="皮肤\RealOne\Thumbs.db" />
+    <None Include="皮肤\Silver\Silver.ssk" />
+    <None Include="皮肤\Silver\SilverColor1.ssk" />
+    <None Include="皮肤\Silver\SilverColor2.ssk" />
+    <None Include="皮肤\Silver\Thumbs.db" />
+    <None Include="皮肤\Sports\SportsBlack.ssk" />
+    <None Include="皮肤\Sports\SportsBlue.ssk" />
+    <None Include="皮肤\Sports\SportsCyan.ssk" />
+    <None Include="皮肤\Sports\SportsGreen.ssk" />
+    <None Include="皮肤\Sports\SportsOrange.ssk" />
+    <None Include="皮肤\Sports\Thumbs.db" />
+    <None Include="皮肤\Steel\SteelBlack.ssk" />
+    <None Include="皮肤\Steel\SteelBlue.ssk" />
+    <None Include="皮肤\Steel\Thumbs.db" />
+    <None Include="皮肤\Vista1\Thumbs.db" />
+    <None Include="皮肤\Vista1\vista1.ssk" />
+    <None Include="皮肤\Vista1\vista1_green.ssk" />
+    <None Include="皮肤\Vista2\Thumbs.db" />
+    <None Include="皮肤\Vista2\Vista2_color1.ssk" />
+    <None Include="皮肤\Vista2\Vista2_color2.ssk" />
+    <None Include="皮肤\Vista2\Vista2_color3.ssk" />
+    <None Include="皮肤\Vista2\Vista2_color4.ssk" />
+    <None Include="皮肤\Vista2\Vista2_color5.ssk" />
+    <None Include="皮肤\Vista2\Vista2_color6.ssk" />
+    <None Include="皮肤\Vista2\Vista2_color7.ssk" />
+    <None Include="皮肤\Warm\Thumbs.db" />
+    <None Include="皮肤\Warm\Warm.ssk" />
+    <None Include="皮肤\Warm\WarmColor1.ssk" />
+    <None Include="皮肤\Warm\WarmColor2.ssk" />
+    <None Include="皮肤\Warm\WarmColor3.ssk" />
+    <None Include="皮肤\Wave\Thumbs.db" />
+    <None Include="皮肤\Wave\Wave.ssk" />
+    <None Include="皮肤\Wave\WaveColor1.ssk" />
+    <None Include="皮肤\Wave\WaveColor2.ssk" />
+    <None Include="皮肤\WinXP\Thumbs.db" />
+    <None Include="皮肤\WinXP\XPBlue.ssk" />
+    <None Include="皮肤\WinXP\XPGreen.ssk" />
+    <None Include="皮肤\WinXP\XPOrange.ssk" />
+    <None Include="皮肤\WinXP\XPSilver.ssk" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="picture\450.ico" />
+    <Content Include="picture\4MA3][H016ND]%242%4062XDYAR.ico" />
+    <Content Include="picture\bitbug_favicon.ico" />
+    <Content Include="media\王笑文 - 耿耿于怀.wav" />
+    <Content Include="picture\11787e224d6f4fc50c6e35929d7c02a9.jpg" />
+    <Content Include="picture\222183.jpg" />
+    <Content Include="picture\289339.jpg" />
+    <Content Include="picture\290794.jpg" />
+    <Content Include="picture\291466.jpg" />
+    <Content Include="picture\307043.jpg" />
+    <Content Include="picture\icon_1.ico" />
+    <Content Include="picture\timg %281%29.jpg" />
+    <Content Include="picture\timg %282%29.jpg" />
+    <Content Include="picture\timg.jpg" />
+    <Content Include="picture\timg1.jpg" />
+    <Content Include="picture\timg10.jpg" />
+    <Content Include="picture\timg11.jpg" />
+    <Content Include="picture\timg12.jpg" />
+    <Content Include="picture\timg13.jpg" />
+    <Content Include="picture\timg14.jpg" />
+    <Content Include="picture\timg2.jpg" />
+    <Content Include="picture\timg5.jpg" />
+    <Content Include="picture\timg6.jpg" />
+    <Content Include="picture\timg7.jpg" />
+    <Content Include="picture\timg8.jpg" />
+    <Content Include="picture\timg9.jpg" />
+    <Content Include="Scripts\jquery.qrcode.js" />
+    <Content Include="Scripts\jquery.qrcode.min.js" />
+    <Content Include="Scripts\qrcode.js" />
+    <Content Include="Scripts\qrcode.min.js" />
+    <Content Include="picture\图片.ico" />
+    <Content Include="picture\图片111.ico" />
+    <Content Include="picture\图片2.ico" />
+    <Content Include="picture\无标题 %281%29.ico" />
+    <Content Include="picture\无标题.ico" />
+    <Content Include="皮肤\Carlmness\calmness.gif" />
+    <Content Include="皮肤\Carlmness\calmness_color1.gif" />
+    <Content Include="皮肤\Carlmness\calmness_color2.gif" />
+    <Content Include="皮肤\Deep\deepcyan.gif" />
+    <Content Include="皮肤\Deep\deepgreen.gif" />
+    <Content Include="皮肤\Deep\deeporange.gif" />
+    <Content Include="皮肤\Diamond\diamondblue.gif" />
+    <Content Include="皮肤\Diamond\diamondgreen.gif" />
+    <Content Include="皮肤\Eighteen\eighteen.gif" />
+    <Content Include="皮肤\Eighteen\eighteen_color1.gif" />
+    <Content Include="皮肤\Eighteen\eighteen_color2.gif" />
+    <Content Include="皮肤\Emerald\emerald.gif" />
+    <Content Include="皮肤\Emerald\emerald_color1.gif" />
+    <Content Include="皮肤\Emerald\emerald_color2.gif" />
+    <Content Include="皮肤\Emerald\emerald_color3.gif" />
+    <Content Include="皮肤\Glass\glassbrown.gif" />
+    <Content Include="皮肤\Glass\glassgreen.gif" />
+    <Content Include="皮肤\Glass\glassorange.gif" />
+    <Content Include="皮肤\Longhorn\longhorn.gif" />
+    <Content Include="皮肤\MacOS\macos.gif" />
+    <Content Include="皮肤\Midsummer\midsummer.gif" />
+    <Content Include="皮肤\Midsummer\midsummer_color1.gif" />
+    <Content Include="皮肤\Midsummer\midsummer_color2.gif" />
+    <Content Include="皮肤\Midsummer\midsummer_color3.gif" />
+    <Content Include="皮肤\MP10\mp10.gif" />
+    <Content Include="皮肤\MSN\msn.gif" />
+    <Content Include="皮肤\One\oneblue.gif" />
+    <Content Include="皮肤\One\onecyan.gif" />
+    <Content Include="皮肤\One\onegreen.gif" />
+    <Content Include="皮肤\One\oneorange.gif" />
+    <Content Include="皮肤\Page\page.gif" />
+    <Content Include="皮肤\Page\page_color1.gif" />
+    <Content Include="皮肤\Page\page_color2.gif" />
+    <Content Include="皮肤\RealOne\realone.gif" />
+    <Content Include="皮肤\Silver\silver.gif" />
+    <Content Include="皮肤\Silver\silver_color1.gif" />
+    <Content Include="皮肤\Silver\silver_color2.gif" />
+    <Content Include="皮肤\Sports\sportsblack.gif" />
+    <Content Include="皮肤\Sports\sportsblue.gif" />
+    <Content Include="皮肤\Sports\sportscyan.gif" />
+    <Content Include="皮肤\Sports\sportsgreen.gif" />
+    <Content Include="皮肤\Sports\sportsorange.gif" />
+    <Content Include="皮肤\Steel\steelblack.gif" />
+    <Content Include="皮肤\Steel\steelblue.gif" />
+    <Content Include="皮肤\Vista1\vista1.gif" />
+    <Content Include="皮肤\Vista1\vista1_green.gif" />
+    <Content Include="皮肤\Vista2\vista2_color1.gif" />
+    <Content Include="皮肤\Vista2\vista2_color2.gif" />
+    <Content Include="皮肤\Vista2\vista2_color3.gif" />
+    <Content Include="皮肤\Vista2\vista2_color4.gif" />
+    <Content Include="皮肤\Vista2\vista2_color5.gif" />
+    <Content Include="皮肤\Vista2\vista2_color6.gif" />
+    <Content Include="皮肤\Vista2\vista2_color7.gif" />
+    <Content Include="皮肤\Warm\warm.gif" />
+    <Content Include="皮肤\Warm\warm_color1.gif" />
+    <Content Include="皮肤\Warm\warm_color2.gif" />
+    <Content Include="皮肤\Warm\warm_color3.gif" />
+    <Content Include="皮肤\Wave\wave.gif" />
+    <Content Include="皮肤\Wave\wave_color1.gif" />
+    <Content Include="皮肤\Wave\wave_color2.gif" />
+    <Content Include="皮肤\WinXP\xpblue.gif" />
+    <Content Include="皮肤\WinXP\xpgreen.gif" />
+    <Content Include="皮肤\WinXP\xporange.gif" />
+    <Content Include="皮肤\WinXP\xpsilver.gif" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

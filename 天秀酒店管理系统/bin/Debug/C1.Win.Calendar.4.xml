@@ -1,0 +1,1967 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>C1.Win.Calendar.4</name>
+  </assembly>
+  <members>
+    <member name="T:C1.Win.Calendar.C1CalendarView">
+      <summary>
+            The <see cref="T:C1.Win.Calendar.C1CalendarView" /> control is used to create a user interface, allowing users to select
+            a specific date (or dates) interactively. Control can display as one month or several months, 
+            and provide quick navigation through months and years.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.C1CalendarView.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Calendar.C1CalendarView" /> control.
+            </summary>
+    </member>
+    <member name="E:C1.Win.Calendar.C1CalendarView.DayFormatting">
+      <summary>
+            Occurs before applying styles to a day.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.C1CalendarView.OnDayFormatting(C1.Win.Calendar.DayFormattingEventArgs)">
+      <summary>
+            Rises the <see cref="E:C1.Win.Calendar.C1CalendarView.DayFormatting" /> event.
+            </summary>
+    </member>
+    <member name="E:C1.Win.Calendar.C1CalendarView.BeforeDayTooltipShow">
+      <summary>
+            Occurs before the day tooltip is shown.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.C1CalendarView.OnBeforeDayTooltipShow(C1.Win.Calendar.BeforeDayTooltipShowEventArgs)">
+      <summary>
+            Rises the <see cref="E:C1.Win.Calendar.C1CalendarView.BeforeDayTooltipShow" /> event.
+            </summary>
+      <param name="e">
+      </param>
+    </member>
+    <member name="E:C1.Win.Calendar.C1CalendarView.StylesChanged">
+      <summary>
+            Occurs when calendar theme changed.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.C1CalendarView.OnThemeChanged(System.EventArgs)">
+      <summary>
+            Rises the <see cref="E:C1.Win.Calendar.C1CalendarView.StylesChanged" /> event.
+            </summary>
+    </member>
+    <member name="E:C1.Win.Calendar.C1CalendarView.SelectionChanged">
+      <summary>
+            Occurs when the range of selected days is changed.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.C1CalendarView.OnSelectionChanged(System.EventArgs)">
+      <summary>
+            Rises the <see cref="E:C1.Win.Calendar.C1CalendarView.SelectionChanged" /> event.
+            </summary>
+    </member>
+    <member name="E:C1.Win.Calendar.C1CalendarView.RightToLeftLayoutChanged">
+      <summary>
+            Occurs when the RightToLeftLayout property is changed.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.C1CalendarView.OnRightToLeftLayoutChanged(System.EventArgs)">
+      <summary>
+            Rises the <see cref="E:C1.Win.Calendar.C1CalendarView.RightToLeftLayoutChanged" /> event.
+            </summary>
+    </member>
+    <member name="E:C1.Win.Calendar.C1CalendarView.DropDownOpening">
+      <summary>
+            Occurs as a dropdown component is opening.
+            </summary>
+      <remarks>
+            A drop-down may be the editor of a year, era, or month.
+            </remarks>
+    </member>
+    <member name="M:C1.Win.Calendar.C1CalendarView.OnDropDownOpening(System.EventArgs)">
+      <summary>
+            Rises the <see cref="E:C1.Win.Calendar.C1CalendarView.DropDownOpening" /> event.
+            </summary>
+    </member>
+    <member name="E:C1.Win.Calendar.C1CalendarView.DropDownOpened">
+      <summary>
+            Occurs after a dropdown component is opened.
+            </summary>
+      <remarks>
+            A drop-down may be the editor of a year, era, or month.
+            </remarks>
+    </member>
+    <member name="M:C1.Win.Calendar.C1CalendarView.OnDropDownOpened(System.EventArgs)">
+      <summary>
+            Rises the <see cref="E:C1.Win.Calendar.C1CalendarView.DropDownOpening" /> event.
+            </summary>
+    </member>
+    <member name="E:C1.Win.Calendar.C1CalendarView.DropDownClosing">
+      <summary>
+            Occurs as a dropdown component is closing.
+            </summary>
+      <remarks>
+            A drop-down may be the editor of a year, era, or month.
+            </remarks>
+    </member>
+    <member name="M:C1.Win.Calendar.C1CalendarView.OnDropDownClosing(System.EventArgs)">
+      <summary>
+            Rises the <see cref="E:C1.Win.Calendar.C1CalendarView.DropDownOpening" /> event.
+            </summary>
+    </member>
+    <member name="E:C1.Win.Calendar.C1CalendarView.DropDownClosed">
+      <summary>
+            Occurs after a dropdown component is closed.
+            </summary>
+      <remarks>
+            A drop-down may be the editor of a year, era, or month.
+            </remarks>
+    </member>
+    <member name="M:C1.Win.Calendar.C1CalendarView.OnDropDownClosed(System.EventArgs)">
+      <summary>
+            Rises the <see cref="E:C1.Win.Calendar.C1CalendarView.DropDownOpening" /> event.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.SelectionRule">
+      <summary>
+            Gets or sets a <see cref="P:C1.Win.Calendar.C1CalendarView.SelectionRule" /> value of selection behavior during month navigation..
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.TodayFormat">
+      <summary>
+            Gets or sets the text format of the "Today" button. Use curly braces to define the date format.
+            </summary>
+      <example>
+            "Today: {MM.dd.yy}"
+            </example>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.DayNameLength">
+      <summary>
+            Gets or sets the maximum length of day names.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.CaptionFormat">
+      <summary>
+            Gets or sets the format to use for the calendar caption.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.WorkDays">
+      <summary>
+            Gets or sets the <see cref="T:C1.CalendarView.WorkDays" /> object which specifies 
+            weekends for the single week.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.C1CalendarView.ShouldSerializeWorkDays">
+      <summary>
+            Indicates whether the <see cref="P:C1.Win.Calendar.C1CalendarView.WorkDays" /> property should be persisted.
+            </summary>
+      <returns>
+        <see langword="true" /> if the <see cref="P:C1.Win.Calendar.C1CalendarView.WorkDays" /> property value has been changed from its default; otherwise, <see langword="false" />.</returns>
+    </member>
+    <member name="M:C1.Win.Calendar.C1CalendarView.ResetWorkDays">
+      <summary>
+            Clears <see cref="P:C1.Win.Calendar.C1CalendarView.WorkDays" />.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.ShowToolTips">
+      <summary>
+            Gets or sets whether the <see cref="T:C1.Win.Calendar.C1CalendarView" /> should display tooltips.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.MaxColumns">
+      <summary>
+            Gets or sets the maximum columns for the <see cref="P:C1.Win.Calendar.C1CalendarView.CalendarDimensions" /> property.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.MinDate">
+      <summary>
+            Gets or sets the minimum allowable date. The default value is <see cref="F:System.DateTime.MinValue" /> (01/01/0001).
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.C1CalendarView.ShouldSerializeMinDate">
+      <summary>
+            Indicates whether the <see cref="P:C1.Win.Calendar.C1CalendarView.MinDate" /> property should be persisted.
+            </summary>
+      <returns>
+        <see langword="true" /> if the <see cref="P:C1.Win.Calendar.C1CalendarView.MinDate" /> property value has been changed from its default; otherwise, <see langword="false" />.</returns>
+    </member>
+    <member name="M:C1.Win.Calendar.C1CalendarView.ResetMinDate">
+      <summary>
+            Clears <see cref="P:C1.Win.Calendar.C1CalendarView.MinDate" />.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.MaxDate">
+      <summary>
+            Gets or sets the maximum allowable date. The default value is <see cref="F:System.DateTime.MaxValue" />.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.C1CalendarView.ShouldSerializeMaxDate">
+      <summary>
+            Indicates whether the <see cref="P:C1.Win.Calendar.C1CalendarView.MaxDate" /> property should be persisted.
+            </summary>
+      <returns>
+        <see langword="true" /> if the <see cref="P:C1.Win.Calendar.C1CalendarView.MaxDate" /> property value has been changed from its default; otherwise, <see langword="false" />.</returns>
+    </member>
+    <member name="M:C1.Win.Calendar.C1CalendarView.ResetMaxDate">
+      <summary>
+            Clears <see cref="P:C1.Win.Calendar.C1CalendarView.MaxDate" />.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.MaxSelectionCount">
+      <summary>
+            Gets or sets the maximum number of days that can be selected in the <see cref="T:C1.Win.Calendar.C1CalendarView" /> control.
+            The default value is 1.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.SelectedDates">
+      <summary>
+            Gets or sets an <see cref="T:System.DateTime" /> array of selected dates.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.DisabledDates">
+      <summary>
+            Gets or sets an <see cref="T:System.DateTime" /> array of disabled dates.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.C1CalendarView.ShouldSerializeDisabledDates">
+      <summary>
+            Indicates whether the <see cref="P:C1.Win.Calendar.C1CalendarView.DisabledDates" /> property should be persisted.
+            </summary>
+      <returns>
+        <see langword="true" /> if the <see cref="P:C1.Win.Calendar.C1CalendarView.DisabledDates" /> property value has been changed from its default; otherwise, <see langword="false" />.</returns>
+    </member>
+    <member name="M:C1.Win.Calendar.C1CalendarView.ResetDisabledDates">
+      <summary>
+            Clears <see cref="P:C1.Win.Calendar.C1CalendarView.DisabledDates" />.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.BoldedDates">
+      <summary>
+            Gets or sets an <see cref="T:System.DateTime" /> array of bolded dates.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.C1CalendarView.ShouldSerializeBoldedDates">
+      <summary>
+            Indicates whether the <see cref="P:C1.Win.Calendar.C1CalendarView.BoldedDates" /> property should be persisted.
+            </summary>
+      <returns>
+        <see langword="true" /> if the <see cref="P:C1.Win.Calendar.C1CalendarView.BoldedDates" /> property value has been changed from its default; otherwise, <see langword="false" />.</returns>
+    </member>
+    <member name="M:C1.Win.Calendar.C1CalendarView.ResetBoldedDates">
+      <summary>
+            Clears <see cref="P:C1.Win.Calendar.C1CalendarView.BoldedDates" />.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.AnnuallyBoldedDates">
+      <summary>
+            Gets or sets an array of annually bolded dates.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.FirstDayOfWeek">
+      <summary>
+            Gets or sets the first day of the week as displayed in the month calendar.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.Calendar">
+      <summary>
+            Gets or set <see cref="T:System.Globalization.Calendar" /> object that represents time in divisions
+            of control.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.CurrentCulture">
+      <summary>
+            Get or sets current culture for the calendar.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.CalendarWeekRule">
+      <summary>
+            Get or sets current calendar week rule.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.CalendarDimensions">
+      <summary>
+            Gets or sets a value that indicates how many months will be shown.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.PeriodSelectionType">
+      <summary>
+            Gets or sets a value that specifies how to get a date period. Default value is <see cref="F:C1.CalendarView.SelectionType.Field" />.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.AutoSize">
+      <summary>
+            Gets or sets a value indicating whether the automatic size adjustment is enabled. 
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.ShowToday">
+      <summary>
+            Gets or sets a value that indicates whether to display today date.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.RightToLeftLayout">
+      <summary>
+             Gets or sets a value indicating whether the control can be laid out from right to left.
+             </summary>
+      <remarks>
+             When the RightToLeft and RightToLeftLayout properties are both true, control is displayed with the right to left layout.
+            </remarks>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.ShowArrowButtons">
+      <summary>
+            Gets or sets the <see cref="T:System.Boolean" /> value indicating whether 
+            <see cref="T:C1.Win.Calendar.C1CalendarView" /> control displays arrow buttons.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.ShowWeekNumbers">
+      <summary>
+            Gets or sets the <see cref="T:System.Boolean" /> value indicating whether 
+            <see cref="T:C1.Win.Calendar.C1CalendarView" /> control displays week numbers.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.VerticalOrientationLayout">
+      <summary>
+            Gets or sets the <see cref="T:System.Boolean" /> value indicating whether positioned vertically of the month
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.CurrentMonthDisplayOffset">
+      <summary>
+            Gets or sets the current month display offset.
+            </summary>
+      <example>
+            This example shows current month at the center of the multi-dimensional calendar.
+            <code>
+              c1CalendarView1.CalendarDimensions = 3;
+              c1CalendarView1.CurrentMonthDisplayOffset = 1;
+            </code></example>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.MonthTitlePosition">
+      <summary>
+            Gets or sets the <see cref="T:C1.CalendarView.Position" /> value indicating where 
+            <see cref="T:C1.Win.Calendar.C1CalendarView" /> control displays the month title.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.DayTitlePosition">
+      <summary>
+            Gets or sets the <see cref="T:C1.CalendarView.Position" /> value indicating where 
+            <see cref="T:C1.Win.Calendar.C1CalendarView" /> control displays the day title.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.Theme">
+      <summary>
+            Gets or sets calendar styles.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.C1CalendarView.FinishEdit">
+      <summary>
+            Finishes edit mode for current date picker.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.C1CalendarView.ShowAboutBox">
+      <summary>
+            Shows the About Box for an instance of C1CalendarView.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.C1CalendarView.OnFontChanged(System.EventArgs)">
+      <summary>
+             Raises the System.Windows.Forms.Control.FontChanged event.
+            </summary>
+      <param name="e">An System.EventArgs that contains the event data.</param>
+    </member>
+    <member name="M:C1.Win.Calendar.C1CalendarView.OnRightToLeftChanged(System.EventArgs)">
+      <summary>
+            Rises the <see cref="E:System.Windows.Forms.Control.RightToLeftChanged" /> event.
+            </summary>
+      <param name="e">An <see cref="T:System.EventArgs" /> that contains the event data</param>
+    </member>
+    <member name="M:C1.Win.Calendar.C1CalendarView.GetPreferredSize(System.Drawing.Size)">
+      <summary>
+            Retrieves the size of a rectangular area into which a control can be fitted.
+            </summary>
+      <param name="proposedSize">The custom-sized area for a control.</param>
+      <returns>An ordered pair of type <see cref="T:System.Drawing.Size" /> representing the width and height
+            of a rectangle.</returns>
+    </member>
+    <member name="M:C1.Win.Calendar.C1CalendarView.Dispose(System.Boolean)">
+      <summary>
+            Releases the unmanaged resources used by the <see cref="T:C1.Win.Calendar.C1CalendarView" /> and
+            its child controls and optionally releases the managed resources.
+            </summary>
+      <param name="disposing">true to release both managed and unmanaged resources; false to release only
+            unmanaged resources.</param>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.DefaultSize">
+      <summary>
+            Gets the default size of the <see cref="T:C1.Win.Calendar.C1CalendarView" />.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.C1CalendarView.SetBoundsCore(System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.BoundsSpecified)">
+      <summary>
+            Performs the work of setting the specified bounds of this control.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.Margin">
+      <summary>
+            Do not use this property.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.Padding">
+      <summary>
+            Do not use this property.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.BackColor">
+      <summary>
+            Gets or sets control back color.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.ForeColor">
+      <summary>
+            Do not use this property.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.BackgroundImage">
+      <summary>
+            Gets or sets the background image for the control.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1CalendarView.BackgroundImageLayout">
+      <summary>
+            Do not use this property. To set layout use Theme.Common.BackImageAlignment
+            and Theme.Common.BackImageScaling properties.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Calendar.C1DateEdit">
+      <summary>
+            Displays and edits date and/or time values. Includes a dropdown calendar for easy input of datetime values.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.C1DateEdit.#ctor">
+      <summary>
+            Initializes a new instance of the C1DateEdit class.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.C1DateEdit.Dispose(System.Boolean)">
+      <summary>
+            Releases the resources used by the C1DateEdit.
+            </summary>
+      <param name="disposing">
+        <b>true</b> to release both managed and unmanaged resources; <b>false</b> to release only unmanaged resources.</param>
+    </member>
+    <member name="P:C1.Win.Calendar.C1DateEdit.InitialField">
+      <summary>
+            Determines the date-time field position when a control receives input focus. Default: <see cref="F:C1.Win.C1Input.DateTimeField.Manual" />.
+            </summary>
+      <remarks>
+            If this property is set to <see cref="F:C1.Win.C1Input.DateTimeField.Manual" />, control used InitialSelection algorithm defined in the <see cref="P:C1.Win.C1Input.C1TextBox.InitialSelection" /> property.
+            </remarks>
+    </member>
+    <member name="P:C1.Win.Calendar.C1DateEdit.AllowSpinLoop">
+      <summary>
+            Determines whether the spinner moves to the <see cref="P:C1.Win.Calendar.CalendarSettings.MinDate" /> when it reaches the <see cref="P:C1.Win.Calendar.CalendarSettings.MaxDate" />, or to the <see cref="P:C1.Win.Calendar.CalendarSettings.MaxDate" /> when it reaches the <see cref="P:C1.Win.Calendar.CalendarSettings.MinDate" />.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1DateEdit.RetainTimeOnDateChange">
+      <summary>
+            Gets or sets a value indicating whether to retain the current time value when the date is changed via the drop down calendar.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1DateEdit.Calendar">
+      <summary>
+            Gets the settings of drop down calendar.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.C1DateEdit.FormatType">
+      <summary>
+            Enumeration value determining the formatting metod, including standard .NET format specifiers, custom and programmatic formatting.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.C1DateEdit.UpdateSelection">
+      <summary>
+            Updates selection of the text according to the <see cref="P:C1.Win.C1Input.C1TextBox.InitialSelection" /> property.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.C1DateEdit.OnFontChanged(System.EventArgs)">
+      <summary>
+            Raises the System.Windows.Forms.Control.FontChanged event.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.C1DateEdit.SetCultureInfo(System.Globalization.CultureInfo)">
+      <summary>
+            Sets culture.
+            </summary>
+      <param name="cultureInfo">New culture.</param>
+    </member>
+    <member name="M:C1.Win.Calendar.C1DateEdit.SpinUp">
+      <summary>
+              Performs spin up.
+            </summary>
+      <remarks>
+              This method has the same behavior with the Up key pressed when day field selected and increments value by one day.
+            </remarks>
+      <seealso cref="M:C1.Win.Calendar.C1DateEdit.SpinDown" />
+    </member>
+    <member name="M:C1.Win.Calendar.C1DateEdit.SpinDown">
+      <summary>
+              Performs spin down.
+            </summary>
+      <remarks>
+              This method has the same behavior with the Down key pressed when day field selected and decrements value by one day.
+            </remarks>
+      <seealso cref="M:C1.Win.Calendar.C1DateEdit.SpinUp" />
+    </member>
+    <member name="M:C1.Win.Calendar.C1DateEdit.SpinUp(System.TimeSpan)">
+      <summary>
+              Performs spin up.
+            </summary>
+      <param name="increment">
+              The <see cref="T:System.TimeSpan" /> value that indicates the increment when spin up.
+            </param>
+      <remarks>
+              This method has the same behavior with the Up key pressed.
+            </remarks>
+      <seealso cref="M:C1.Win.Calendar.C1DateEdit.SpinDown(System.TimeSpan)" />
+    </member>
+    <member name="M:C1.Win.Calendar.C1DateEdit.SpinDown(System.TimeSpan)">
+      <summary>
+              Performs spin down.
+            </summary>
+      <param name="decrement">
+              The <see cref="T:System.TimeSpan" /> value that indicates the decrement when spin down.
+            </param>
+      <remarks>
+              This method has the same behavior with the Down key pressed.
+            </remarks>
+      <seealso cref="M:C1.Win.Calendar.C1DateEdit.SpinUp(System.TimeSpan)" />
+    </member>
+    <member name="T:C1.Win.Calendar.Exceptions.CaptionValidationException">
+      <summary>
+            Represents errors that occur during caption format validation.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.Exceptions.CaptionValidationException.#ctor(System.String)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Calendar.Exceptions.CaptionValidationException" /> object.
+            </summary>
+      <param name="msg">Error message</param>
+    </member>
+    <member name="T:C1.Win.Calendar.Exceptions.UnsupportedValueException`1">
+      <summary>
+            Represents errors that arise in consequence of unsupported values.
+            </summary>
+      <typeparam name="T">
+      </typeparam>
+    </member>
+    <member name="M:C1.Win.Calendar.Exceptions.UnsupportedValueException`1.#ctor(`0,System.String)">
+      <summary>
+            Initializes a new instance of the UnsupportedValueException object.
+            </summary>
+      <param name="value">Unsupported value</param>
+      <param name="msg">Error message</param>
+    </member>
+    <member name="P:C1.Win.Calendar.Exceptions.UnsupportedValueException`1.Value">
+      <summary>
+      </summary>
+    </member>
+    <member name="T:C1.Win.Calendar.CalendarSettings">
+      <summary>
+            Represents the settings of drop down calendar.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.ShowToolTips">
+      <summary>
+            Gets or sets whether the <see cref="T:C1.Win.Calendar.C1DateEdit" /> should display tooltips.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.CurrentMonthDisplayOffset">
+      <summary>
+            Gets or sets the current month display offset.
+            </summary>
+      <example>
+            This example shows current month at the center of the multi-dimensional 
+            drop down calendar.
+            <code>
+              c1DateEdit1.Calendar.CalendarDimensions = new Size(3, 1);
+              // Display current month at the center of the calendar.
+              // Other possible values:
+              // 0 - (Default) - at the Right
+              // 1 - Center
+              // 2 - Left
+              c1DateEdit1.Calendar.CurrentMonthDisplayOffset = 1;
+            </code></example>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.VisualStyle">
+      <summary>
+            Gets or sets VisualStyle.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.ShouldSerializeVisualStyle">
+      <summary>
+            Tests whether <see cref="P:C1.Win.Calendar.CalendarSettings.VisualStyle" /> should be serialized.
+            </summary>
+      <returns>True if <see cref="P:C1.Win.Calendar.CalendarSettings.VisualStyle" /> should be serialized, false otherwise.</returns>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.ResetVisualStyle">
+      <summary>
+            Resets <see cref="P:C1.Win.Calendar.CalendarSettings.VisualStyle" /> to the default value.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.MinDate">
+      <summary>
+            Gets or sets the minimum allowable date. The default value is DateTime.MinValue (01/01/0001).
+            </summary>
+      <exception cref="T:System.ArgumentException">
+            The value is greater than the <see cref="P:C1.Win.Calendar.CalendarSettings.MaxDate" />.
+            </exception>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.ShouldSerializeMinDate">
+      <summary>
+            Indicates whether the <see cref="P:C1.Win.Calendar.CalendarSettings.MinDate" /> property should be persisted.
+            </summary>
+      <returns>
+        <see langword="true" /> if the <see cref="P:C1.Win.Calendar.CalendarSettings.MinDate" /> property value has been changed from its default; otherwise, <see langword="false" />.</returns>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.ResetMinDate">
+      <summary>
+            Sets the <see cref="P:C1.Win.Calendar.CalendarSettings.MinDate" /> property to its default value.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.MaxDate">
+      <summary>
+            Gets or sets the maximum allowable date.
+            </summary>
+      <exception cref="T:System.ArgumentException">
+            The value is less than the <see cref="P:C1.Win.Calendar.CalendarSettings.MinDate" />.
+            </exception>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.ShouldSerializeMaxDate">
+      <summary>
+            Indicates whether the <see cref="P:C1.Win.Calendar.CalendarSettings.MaxDate" /> property should be persisted.
+            </summary>
+      <returns>
+        <see langword="true" /> if the <see cref="P:C1.Win.Calendar.CalendarSettings.MaxDate" /> property value has been changed from its default; otherwise, <see langword="false" />.</returns>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.ResetMaxDate">
+      <summary>
+            Sets the <see cref="P:C1.Win.Calendar.CalendarSettings.MaxDate" /> property to its default value.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.DateIsNull">
+      <summary>
+            Gets or sets the value indicating that no date is currently selected in the calendar.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.BackColor">
+      <summary>
+            Gets or sets the background color of the control.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.ForeColor">
+      <summary>
+            Gets or sets the foreground color of the control.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.SelectionBackColor">
+      <summary>
+            Gets or sets the selection background color.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.SelectionForeColor">
+      <summary>
+            Gets or sets the selection foreground color.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.LineColor">
+      <summary>
+            Gets or sets the line color.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.ArrowColor">
+      <summary>
+            Gets or sets the color of the arrows.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.TodayBorderColor">
+      <summary>
+            Gets or sets the color of the border around the current date.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.TrailingForeColor">
+      <summary>
+             Gets or sets a value indicating the color of days in months that are not
+                fully displayed in the control.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.DayNamesColor">
+      <summary>
+            Gets or sets the day names' text color.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.TitleBackColor">
+      <summary>
+            Gets or sets a value indicating the background color of the title area of the calendar.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.TitleForeColor">
+      <summary>
+            Gets or sets a value indicating the foreground color of the title area of the calendar.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.FirstMonth">
+      <summary>
+            Gets the first day of the first fully shown month.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.LastMonth">
+      <summary>
+            Gets the last day of the last fully shown month.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.SelectedDate">
+      <summary>
+            Gets or sets the selected date.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.ShouldSerializeSelectedDate">
+      <summary>
+            Indicates whether the <see cref="P:C1.Win.Calendar.CalendarSettings.SelectedDate" /> property should be persisted.
+            </summary>
+      <returns>
+        <see langword="true" /> if the <see cref="P:C1.Win.Calendar.CalendarSettings.SelectedDate" /> property value has been changed from its default; otherwise, <see langword="false" />.</returns>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.ResetSelectedDate">
+      <summary>
+            Sets the <see cref="P:C1.Win.Calendar.CalendarSettings.SelectedDate" /> property to its default value.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.CalendarDimensions">
+      <summary>
+            Gets or sets the number of columns and rows of months displayed.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.ShouldSerializeCalendarDimensions">
+      <summary>
+            Indicates whether the <see cref="P:C1.Win.Calendar.CalendarSettings.CalendarDimensions" /> property should be persisted.
+            </summary>
+      <returns>
+        <see langword="true" /> if the <see cref="P:C1.Win.Calendar.CalendarSettings.CalendarDimensions" /> property value has been changed from its default; otherwise, <see langword="false" />.</returns>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.ResetCalendarDimensions">
+      <summary>
+            Sets the <see cref="P:C1.Win.Calendar.CalendarSettings.CalendarDimensions" /> property to its default value.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.FirstDayOfWeek">
+      <summary>
+            Gets or sets the first day of the week as displayed in the month calendar.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.CaptionFormat">
+      <summary>
+            Gets or sets the format to use for the calendar caption.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.DayNameLength">
+      <summary>
+            Gets or sets the maximum length of day names.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.TitleHeight">
+      <summary>
+            Gets or sets the title height.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.Font">
+      <summary>
+            Gets or sets the font of the text displayed by the dropdown calendar.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.TitleFont">
+      <summary>
+            Gets or sets the title font.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.WeekNumbersFont">
+      <summary>
+            Gets or sets the font of week numbers.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.DayNamesFont">
+      <summary>
+            Gets or sets the day names font.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.BoldedDates">
+      <summary>
+            Gets or sets the array of System.DateTime objects that determines which nonrecurring dates are displayed in bold.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.ShouldSerializeBoldedDates">
+      <summary>
+            Indicates whether the <see cref="P:C1.Win.Calendar.CalendarSettings.BoldedDates" /> property should be persisted.
+            </summary>
+      <returns>
+        <see langword="true" /> if the <see cref="P:C1.Win.Calendar.CalendarSettings.BoldedDates" /> property value has been changed from its default; otherwise, <see langword="false" />.</returns>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.ResetBoldedDates">
+      <summary>
+            Clears <see cref="P:C1.Win.Calendar.CalendarSettings.BoldedDates" />.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.AnnuallyBoldedDates">
+      <summary>
+            Gets or sets the array of System.DateTime objects that determines which annual days are displayed in bold.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.ShouldSerializeAnnuallyBoldedDates">
+      <summary>
+            Indicates whether the <see cref="P:C1.Win.Calendar.CalendarSettings.AnnuallyBoldedDates" /> property should be persisted.
+            </summary>
+      <returns>
+        <see langword="true" /> if the <see cref="P:C1.Win.Calendar.CalendarSettings.AnnuallyBoldedDates" /> property value has been changed from its default; otherwise, <see langword="false" />.</returns>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.ResetAnnuallyBoldedDates">
+      <summary>
+            Clears <see cref="P:C1.Win.Calendar.CalendarSettings.AnnuallyBoldedDates" />.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.ShouldSerializeMonthlyBoldedDates">
+      <summary>
+            Indicates whether the <see cref="P:C1.Win.Calendar.CalendarSettings.MonthlyBoldedDates" /> property should be persisted.
+            </summary>
+      <returns>
+        <see langword="true" /> if the <see cref="P:C1.Win.Calendar.CalendarSettings.MonthlyBoldedDates" /> property value has been changed from its default; otherwise, <see langword="false" />.</returns>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.ResetMonthlyBoldedDates">
+      <summary>
+            Clears <see cref="P:C1.Win.Calendar.CalendarSettings.MonthlyBoldedDates" />.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.DisabledDates">
+      <summary>
+            Gets or sets the array of System.DateTime objects that determines which dates are disabled.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.ShouldSerializeDisabledDates">
+      <summary>
+            Indicates whether the <see cref="P:C1.Win.Calendar.CalendarSettings.DisabledDates" /> property should be persisted.
+            </summary>
+      <returns>
+        <see langword="true" /> if the <see cref="P:C1.Win.Calendar.CalendarSettings.DisabledDates" /> property value has been changed from its default; otherwise, <see langword="false" />.</returns>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.ResetDisabledDates">
+      <summary>
+            Clears <see cref="M:C1.Win.Calendar.CalendarSettings.ResetDisabledDates" />.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.ShowToday">
+      <summary>
+            Gets or sets a value indicating whether the date represented by the TodayDate property is displayed at the bottom of the control. 
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.ShowTodayCircle">
+      <summary>
+            Gets or sets a value indicating whether today's date is circled.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.ShowTodayButton">
+      <summary>
+            Determines if the Today button of the dropdown calendar is visible.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.ShowClearButton">
+      <summary>
+            Determines if the Clear button of the dropdown calendar is visible.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.TodayText">
+      <summary>
+            Gets or sets the text of the "Today" button.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.ClearText">
+      <summary>
+            Gets or sets the text of the "Clear" button.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.CalendarWeekRule">
+      <summary>
+            Gets or sets a value that specifies which rule is used to determine the first calendar week of the year.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.ShowWeekNumbers">
+      <summary>
+            Gets or sets a value indicating whether the month calendar control displays
+               week numbers (1-52) to the left of each row of days.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.RightToLeft">
+      <summary>
+            Gets or sets a value indicating whether control's elements are aligned to support locales using right-to-left fonts.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.RightToLeftLayout">
+      <summary>
+            Gets or sets a value indicating whether the control is laid out from right to left.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.CalendarSettings.TitleNavigation">
+      <summary>
+            Gets or sets a value indicating whether current month and year can be changed by clicking on the title of the calendar.
+            </summary>
+    </member>
+    <member name="E:C1.Win.Calendar.CalendarSettings.VisualStyleChanged">
+      <summary>
+            Occurs when the VisualStyle property has changed.
+            </summary>
+    </member>
+    <member name="E:C1.Win.Calendar.CalendarSettings.TodayButtonClick">
+      <summary>
+            Occurs when Today button is clicked.
+            </summary>
+    </member>
+    <member name="E:C1.Win.Calendar.CalendarSettings.ClearButtonClick">
+      <summary>
+            Occurs when Clear button is clicked.
+            </summary>
+    </member>
+    <member name="E:C1.Win.Calendar.CalendarSettings.TodayButtonVisibilityChanged">
+      <summary>
+            Occurs when Today button visibility is changed.
+            </summary>
+    </member>
+    <member name="E:C1.Win.Calendar.CalendarSettings.ClearButtonVisibilityChanged">
+      <summary>
+            Occurs when Clear button visibility is changed.
+            </summary>
+    </member>
+    <member name="E:C1.Win.Calendar.CalendarSettings.DateValueChanged">
+      <summary>
+            Occurs when the value of the Date property is changed.
+            </summary>
+    </member>
+    <member name="E:C1.Win.Calendar.CalendarSettings.DateValueSelected">
+      <summary>
+            Occurs when the user selects a value for the Date property.
+            </summary>
+    </member>
+    <member name="E:C1.Win.Calendar.CalendarSettings.RightToLeftLayoutChanged">
+      <summary>
+            Occurs when the value of the RightToLeftLayout property changes.
+            </summary>
+    </member>
+    <member name="E:C1.Win.Calendar.CalendarSettings.MonthChanged">
+      <summary>
+            Handles the month change in the Dropdown calendar in C1DateEdit. 
+            Occurs when the value of the <see cref="P:C1.Win.Calendar.CalendarSettings.FirstMonth" /> or <see cref="P:C1.Win.Calendar.CalendarSettings.LastMonth" /> property changes.
+            </summary>
+      <remarks>
+            Can be used to set some dates in the month to bold as user scrolls through the months.
+            </remarks>
+      <example>
+            This example sets a new bolded date in the selected month.
+            <code>
+            private void c1DateEdit1_Calendar_MonthChanged(object sender, EventArgs e)
+            {
+               DateTime dt = c1DateEdit1.Calendar.FirstMonth;
+               c1DateEdit1.Calendar.AddBoldedDate(new DateTime(dt.Year, dt.Month, dt.Month));
+            }
+            </code></example>
+    </member>
+    <member name="E:C1.Win.Calendar.CalendarSettings.BeforeDayTooltipShow">
+      <summary>
+            Occurs before the day tooltip is shown.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.OnBeforeDayTooltipShow(C1.Win.Calendar.BeforeDayTooltipShowEventArgs)">
+      <summary>
+            Rises the <see cref="E:C1.Win.Calendar.CalendarSettings.BeforeDayTooltipShow" /> event.
+            </summary>
+      <param name="e">
+      </param>
+    </member>
+    <member name="E:C1.Win.Calendar.CalendarSettings.DayFormatting">
+      <summary>
+            Occurs before applying styles to a day.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.OnDayFormatting(C1.Win.Calendar.DayFormattingEventArgs)">
+      <summary>
+            Rises the <see cref="E:C1.Win.Calendar.CalendarSettings.DayFormatting" /> event.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.OnVisualStyleChanged(System.EventArgs)">
+      <summary>
+            Raises the <see cref="E:C1.Win.Calendar.CalendarSettings.VisualStyleChanged" /> event.
+            </summary>
+      <param name="e">The event arguments.</param>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.OnTodayButtonClick(System.EventArgs)">
+      <summary>
+            Raises the <see cref="E:C1.Win.Calendar.CalendarSettings.TodayButtonClick" /> event.
+            </summary>
+      <param name="e">The event arguments.</param>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.OnClearButtonClick(System.EventArgs)">
+      <summary>
+            Raises the <see cref="E:C1.Win.Calendar.CalendarSettings.ClearButtonClick" /> event.
+            </summary>
+      <param name="e">The event arguments.</param>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.OnTodayButtonVisibilityChanged(System.EventArgs)">
+      <summary>
+            Raises the <see cref="E:C1.Win.Calendar.CalendarSettings.TodayButtonVisibilityChanged" /> event.
+            </summary>
+      <param name="e">The event arguments.</param>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.OnClearButtonVisibilityChanged(System.EventArgs)">
+      <summary>
+            Raises the <see cref="E:C1.Win.Calendar.CalendarSettings.ClearButtonVisibilityChanged" /> event.
+            </summary>
+      <param name="e">The event arguments.</param>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.OnDateValueChanged(C1.Win.Calendar.NullableDateTimeEventArgs)">
+      <summary>
+            Raises the <see cref="E:C1.Win.Calendar.CalendarSettings.DateValueChanged" /> event.
+            </summary>
+      <param name="e">The event arguments.</param>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.OnDateValueSelected(C1.Win.Calendar.NullableDateTimeEventArgs)">
+      <summary>
+            Raises the <see cref="E:C1.Win.Calendar.CalendarSettings.DateValueSelected" /> event.
+            </summary>
+      <param name="e">The event arguments.</param>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.OnRightToLeftLayoutChanged(System.EventArgs)">
+      <summary>
+            Raises the <see cref="E:C1.Win.Calendar.CalendarSettings.RightToLeftLayoutChanged" /> event.
+            </summary>
+      <param name="e">An <see cref="T:System.EventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.OnMonthChanged(System.EventArgs)">
+      <summary>
+            Raises the <see cref="E:C1.Win.Calendar.CalendarSettings.MonthChanged" /> event.
+            </summary>
+      <param name="e">An <see cref="T:System.EventArgs" /> that contains the event data.</param>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.AddAnnuallyBoldedDate(System.DateTime)">
+      <summary>
+            Adds a day that is displayed in bold on an annual basis in the month calendar.
+            </summary>
+      <param name="date">The date to be displayed in bold.</param>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.AddBoldedDate(System.DateTime)">
+      <summary>
+            Adds a day to be displayed in bold in the month calendar.
+            </summary>
+      <param name="date">The date to be displayed in bold.</param>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.AddDisabledDate(System.DateTime)">
+      <summary>
+            Adds a day to be disabled in the month calendar.
+            </summary>
+      <param name="date">The date to be disabled.</param>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.AddMonthlyBoldedDate(System.DateTime)">
+      <summary>
+            Adds a day that is displayed in bold on a monthly basis in the month calendar.
+            </summary>
+      <param name="date">The date to be displayed in bold.</param>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.RemoveAllAnnuallyBoldedDates">
+      <summary>
+            Removes all the annually bold dates.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.RemoveAllBoldedDates">
+      <summary>
+            Removes all the nonrecurring bold dates.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.RemoveAllDisabledDates">
+      <summary>
+            Removes the all disabled dates.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.RemoveAllMonthlyBoldedDates">
+      <summary>
+            Removes all the monthly bold dates.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.RemoveAnnuallyBoldedDate(System.DateTime)">
+      <summary>
+            Removes the specified date from the list of annually bold dates.
+            </summary>
+      <param name="date">The date to remove from the date list.</param>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.RemoveBoldedDate(System.DateTime)">
+      <summary>
+            Removes the specified date from the list of nonrecurring bold dates.
+            </summary>
+      <param name="date">The date to remove from the date list.</param>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.RemoveDisabledDate(System.DateTime)">
+      <summary>
+            Removes the specified date from the list of disabled dates.
+            </summary>
+      <param name="date">The date to remove from the date list.</param>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.RemoveMonthlyBoldedDate(System.DateTime)">
+      <summary>
+            Removes the specified date from the list of monthly bolded dates.
+            </summary>
+      <param name="date">The date to remove from the date list.</param>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.SetCalendarDimensions(System.Int32,System.Int32)">
+      <summary>
+            Sets the number of columns and rows of months to display.
+            </summary>
+      <param name="x">The number of columns.</param>
+      <param name="y">The number of rows.</param>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.SetDate(System.DateTime)">
+      <summary>
+            Sets a date as the currently selected date.
+            </summary>
+      <param name="date">The date to be selected.</param>
+    </member>
+    <member name="M:C1.Win.Calendar.CalendarSettings.SetSelectionRange(System.DateTime,System.DateTime)">
+      <summary>
+            Sets the selected dates in a month calendar control to the specified date range.
+            </summary>
+      <param name="date1">The beginning date of the selection range.</param>
+      <param name="date2">The end date of the selection range.</param>
+    </member>
+    <member name="T:C1.Win.Calendar.DropDownCalendar">
+      <summary>
+            Represents drop down calendar picker form.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.DropDownCalendar.#ctor">
+      <summary>
+            Initializes a new instance of the DropDownCalendar class.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.DropDownCalendar.Font">
+      <summary>
+            Gets or sets the font of the text displayed by the control.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.DropDownCalendar.Dispose(System.Boolean)">
+      <summary>
+            Clean up any resources being used.
+            </summary>
+      <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+    </member>
+    <member name="T:C1.Win.Calendar.BeforeDayTooltipShowEventArgs">
+      <summary>
+            Provides data for the <see cref="E:C1.Win.Calendar.C1CalendarView.BeforeDayTooltipShow" /> event 
+            of the <see cref="T:C1.Win.Calendar.C1CalendarView" /> control. 
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.BeforeDayTooltipShowEventArgs.Text">
+      <summary>
+            Gets or sets tooltip text. The default text is an empty string. 
+            </summary>
+      <remarks>Use html encoding to format the text.</remarks>
+    </member>
+    <member name="P:C1.Win.Calendar.BeforeDayTooltipShowEventArgs.Day">
+      <summary>
+            Gets the date for which tooltip is about to be shown.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Calendar.DayFormattingEventArgs">
+      <summary>
+            Provides data for the <see cref="E:C1.Win.Calendar.C1CalendarView.DayFormatting" /> event 
+            of the <see cref="T:C1.Win.Calendar.C1CalendarView" /> control. 
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.DayFormattingEventArgs.#ctor(System.DateTime,C1.Win.Calendar.UI.DayStyle)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Calendar.DayFormattingEventArgs" /> class.
+            </summary>
+      <param name="day">The date of the day.</param>
+      <param name="dayStyle">The current style of the day.</param>
+    </member>
+    <member name="P:C1.Win.Calendar.DayFormattingEventArgs.Day">
+      <summary>
+            Gets the date of the day.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.DayFormattingEventArgs.DayStyle">
+      <summary>
+            Gets the current style of the day.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Calendar.Localization.Strings">
+      <summary>
+            The <see cref="T:C1.Win.Calendar.Localization.Strings" /> class contains static properties used for localization.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.Localization.Strings.ResourceManager">
+      <summary>
+            The <see cref="P:C1.Win.Calendar.Localization.Strings.ResourceManager" /> object used for lookup resources.
+            </summary>
+      <remarks>Set this property to the valid value if 
+            you define resources in a Custom Control assembly.</remarks>
+    </member>
+    <member name="P:C1.Win.Calendar.Localization.Strings.UICulture">
+      <summary>
+            Returns default <see cref="T:System.Globalization.CultureInfo" /> object used as fallback culture.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Calendar.NullableDateTimeEventHandler">
+      <summary>
+            Represents the method that handles DateValueChanged and DateValueSelected events.
+            </summary>
+      <param name="sender">The source of the event.</param>
+      <param name="e">A NullableDateTimeEventArgs object that contains the event data.</param>
+    </member>
+    <member name="T:C1.Win.Calendar.NullableDateTimeEventArgs">
+      <summary>
+            Provides data for DateValueChanged and DateValueSelected events.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.NullableDateTimeEventArgs.Date">
+      <summary>
+            The date value.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.NullableDateTimeEventArgs.DateIsNull">
+      <summary>
+            Set to True if the date value is null.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Calendar.UI.BaseStyle">
+      <summary>
+            Base style for all styles in <see cref="T:C1.Win.Calendar.C1CalendarView" />.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.BaseStyle.Name">
+      <summary>
+            Gets or sets the style name.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.BaseStyle.Padding">
+      <summary>
+            Gets or sets the thickness of the padding between the element edges and its content.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.BaseStyle.Margins">
+      <summary>
+            Gets or sets the thickness of the margins around the element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.BaseStyle.BackColor">
+      <summary>
+            Gets or sets the <see cref="T:System.Drawing.Color" /> used to paint the background.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.BaseStyle.Border">
+      <summary>
+            Gets or sets the thickness of the border around the element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.BaseStyle.BorderColor">
+      <summary>
+            Gets or sets the <see cref="T:System.Drawing.Color" /> used to draw the border around the element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.BaseStyle.HorizontalAlignment">
+      <summary>
+            Gets or sets how elements should be aligned in the horizontal direction.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.BaseStyle.VerticalAlignment">
+      <summary>
+            Gets or sets how elements should be aligned in the vertical direction.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Calendar.UI.BaseTheme">
+      <summary>
+            Base class for themes
+            </summary>
+    </member>
+    <member name="E:C1.Win.Calendar.UI.BaseTheme.StyleChanged">
+      <summary>
+            Fires when any property is changed.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.UI.BaseTheme.OnStyleChanged(System.Object,System.EventArgs)">
+      <summary>
+      </summary>
+      <param name="sender">
+      </param>
+      <param name="e">
+      </param>
+    </member>
+    <member name="M:C1.Win.Calendar.UI.BaseTheme.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Calendar.UI.BaseTheme" /> control.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.UI.BaseTheme.#ctor(C1.Win.Calendar.UI.BaseTheme)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Calendar.UI.BaseTheme" /> control.
+            </summary>
+      <param name="prototype">Prototype.</param>
+    </member>
+    <member name="M:C1.Win.Calendar.UI.BaseTheme.Dispose">
+      <summary>
+            Destructor.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.BaseTheme.Name">
+      <summary>
+            Gets or sets the theme name.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.UI.BaseTheme.GetStyle(System.String)">
+      <summary>
+            Get style by name.
+            </summary>
+      <param name="name">Style name.</param>
+      <returns>
+        <see cref="T:C1.Framework.Style" /> object.</returns>
+    </member>
+    <member name="M:C1.Win.Calendar.UI.BaseTheme.SetStyle(C1.Framework.Style,System.String)">
+      <summary>
+            Set existing style or add new.
+            </summary>
+      <param name="value">Style.</param>
+      <param name="name">Style name.</param>
+    </member>
+    <member name="M:C1.Win.Calendar.UI.BaseTheme.Reset">
+      <summary>
+            Reset all styles to default.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.UI.BaseTheme.SubscribeOnStyleChanged(C1.Framework.Style)">
+      <summary>
+            To subscribe to events of changing styles.
+            </summary>
+      <param name="item">Style to subscribe.</param>
+    </member>
+    <member name="M:C1.Win.Calendar.UI.BaseTheme.UnsubscribeOnStyleChanged(C1.Framework.Style)">
+      <summary>
+            To unsubscribe to events of changing styles.
+            </summary>
+      <param name="item">Style to unsubscribe.</param>
+    </member>
+    <member name="M:C1.Win.Calendar.UI.BaseTheme.ToString">
+      <summary>
+            Returns the value of a <see cref="P:C1.Framework.Theme.Name" /> property.
+            </summary>
+      <returns>
+      </returns>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.BaseTheme.ComponentType">
+      <summary>
+            Component type.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Calendar.UI.CalendarTheme">
+      <summary>
+            The <see cref="T:C1.Win.Calendar.UI.CalendarTheme" /> class represents the theme for the C1CalendarView control 
+            which contains display attributes that determine the appearance of control. 
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.UI.CalendarTheme.#ctor(C1.Win.Calendar.UI.CalendarTheme)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Calendar.UI.CalendarTheme" /> control.
+            </summary>
+      <param name="prototype">Prototype.</param>
+    </member>
+    <member name="M:C1.Win.Calendar.UI.CalendarTheme.Dispose">
+      <summary>
+            Destructor.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.CalendarTheme.Day">
+      <summary>
+            Gets styles which determine the appearance of <see cref="T:C1.Win.Calendar.C1CalendarView" /> day
+            elements on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.CalendarTheme.Titles">
+      <summary>
+            Gets styles which determine the appearance of <see cref="T:C1.Win.Calendar.C1CalendarView" /> title
+            elements on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.CalendarTheme.NavigationButtons">
+      <summary>
+            Gets styles which determine the appearance of <see cref="T:C1.Win.Calendar.C1CalendarView" /> navigation
+            elements on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.CalendarTheme.Common">
+      <summary>
+            Gets <see cref="T:C1.Win.Calendar.UI.CommonStyle" /> contains display common attributes that 
+            determine the appearance of <see cref="T:C1.Win.Calendar.C1CalendarView" /> on the screen.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.UI.CalendarTheme.Reset">
+      <summary>
+            Reset all CalendarTheme styles to default.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Calendar.UI.CommonStyle">
+      <summary>
+            The <see cref="T:C1.Win.Calendar.UI.CommonStyle" /> class contains display common attributes that 
+            determine the appearance of <see cref="T:C1.Win.Calendar.C1CalendarView" /> on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.CommonStyle.VerticalAlignment">
+      <summary>
+            Gets or sets how elements should be aligned in the vertical direction when VerticalOrientationLayout is set to True.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.CommonStyle.BackImage">
+      <summary>
+            Gets or sets the background image for the <see cref="T:C1.Win.Calendar.C1CalendarView" /> control.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.CommonStyle.BackImageAlignment">
+      <summary>
+            Gets or sets the alignment used to render the background image of <see cref="T:C1.Win.Calendar.C1CalendarView" /> control.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.CommonStyle.BackImageScaling">
+      <summary>
+            Gets or sets the scaling used to render the background image of the <see cref="T:C1.Win.Calendar.C1CalendarView" /> control.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Calendar.UI.DayTheme">
+      <summary>
+            Class contains day styles which determine the appearance of <see cref="T:C1.Win.Calendar.C1CalendarView" /> 
+            day element on the screen.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.UI.DayTheme.#ctor">
+      <summary>
+            Constructor.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.UI.DayTheme.#ctor(C1.Win.Calendar.UI.DayTheme)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Calendar.UI.DayTheme" /> control.
+            </summary>
+      <param name="prototype">Prototype.</param>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.DayTheme.Ordinary">
+      <summary>
+            Gets or sets Ordinary day style.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.DayTheme.Trail">
+      <summary>
+            Gets or sets Trail day style.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.DayTheme.Selected">
+      <summary>
+            Gets or sets selected day style.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.DayTheme.Bolded">
+      <summary>
+            Gets or sets bolded day style.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.DayTheme.Disabled">
+      <summary>
+            Gets or sets disabled day style.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.DayTheme.Weekend">
+      <summary>
+            Gets or sets base weekend day style. Determines the appearance of all weekends on the screen 
+            if they have no their own definition.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.DayTheme.Today">
+      <summary>
+            Gets or sets style for today date.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.UI.DayTheme.Reset">
+      <summary>
+            Reset all DayTheme day styles to default.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Calendar.UI.DayStyle">
+      <summary>
+            The <see cref="T:C1.Win.Calendar.UI.DayStyle" /> class contains display attributes that 
+            determine the appearance of <see cref="T:C1.Win.Calendar.C1CalendarView" /> day element on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.DayStyle.Font">
+      <summary>
+            Gets or sets text font of day element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.DayStyle.ForeColor">
+      <summary>
+            Gets or sets the <see cref="T:System.Drawing.Color" /> used to paint the text of a day element.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.UI.DayStyle.Equals(C1.Win.Calendar.UI.DayStyle)">
+      <summary>
+            Specified whether this instance and specified <see cref="T:C1.Win.Calendar.UI.DayStyle" /> object are equal.
+            </summary>
+      <param name="style">Object to check.</param>
+      <returns>True if equal or false if not.</returns>
+    </member>
+    <member name="M:C1.Win.Calendar.UI.DayStyle.Equals(C1.Framework.Style)">
+      <summary>
+            Specified whether this instance and specified <see cref="T:C1.Framework.Style" /> object are equal.
+            </summary>
+      <param name="style">Specified <see cref="T:C1.Framework.Style" /> object.</param>
+      <returns>True if equal or false if not.</returns>
+    </member>
+    <member name="T:C1.Win.Calendar.UI.NavigationButtonsTheme">
+      <summary>
+            The <see cref="T:C1.Win.Calendar.UI.NavigationButtonsTheme" /> contains styles which determine the appearance
+            of <see cref="T:C1.Win.Calendar.C1CalendarView" />  navigation buttons on the screen.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.UI.NavigationButtonsTheme.#ctor">
+      <summary>
+            Constructor.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.UI.NavigationButtonsTheme.#ctor(C1.Win.Calendar.UI.NavigationButtonsTheme)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Calendar.UI.NavigationButtonsTheme" /> control.
+            </summary>
+      <param name="prototype">Prototype.</param>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.NavigationButtonsTheme.ImageArrowNext">
+      <summary>
+            Gets or sets <see cref="T:System.Drawing.Image" /> for arrow next button.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.NavigationButtonsTheme.ImageArrowPrevious">
+      <summary>
+            Gets or sets <see cref="T:System.Drawing.Image" /> for arrow previous button.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.NavigationButtonsTheme.ArrowNext">
+      <summary>
+            Gets or sets style for arrow next button.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.NavigationButtonsTheme.ArrowPrevious">
+      <summary>
+            Gets or sets style for arrow previous button.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.UI.NavigationButtonsTheme.Reset">
+      <summary>
+            Reset all NavigationButtonsTheme styles to default.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Calendar.UI.BaseArrowStyle">
+      <summary>
+            The <see cref="T:C1.Win.Calendar.UI.ArrowStyle" /> class contains display attributes that 
+            determine the appearance of <see cref="T:C1.Win.Calendar.C1CalendarView" /> arrow button element on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.BaseArrowStyle.ForeColor">
+      <summary>
+            Gets or sets the <see cref="T:System.Drawing.Color" /> used to paint the arrow.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.BaseArrowStyle.BackImage">
+      <summary>
+            Gets or sets the background image for the ArrowButton element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.BaseArrowStyle.BackImageAlignment">
+      <summary>
+            Gets or sets the alignment used to render the background image of ArrowButton.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.BaseArrowStyle.BackImageScaling">
+      <summary>
+            Gets or sets the scaling used to render the background image of ArrowButton.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Calendar.UI.ArrowStyle">
+      <summary>
+            The <see cref="T:C1.Win.Calendar.UI.ArrowStyle" /> class contains display attributes that 
+            determine the appearance of <see cref="T:C1.Win.Calendar.C1CalendarView" /> hot arrow button element on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.ArrowStyle.Hot">
+      <summary>
+            Gets or sets the style to be used when the ArrowButton element is hot.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Calendar.UI.TitleTheme">
+      <summary>
+            The <see cref="T:C1.Win.Calendar.UI.TitleTheme" /> contains styles which determine the appearance of 
+            <see cref="T:C1.Win.Calendar.C1CalendarView" /> titles on the screen.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.UI.TitleTheme.#ctor">
+      <summary>
+            Constructor.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.UI.TitleTheme.#ctor(C1.Win.Calendar.UI.TitleTheme)">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.Win.Calendar.UI.TitleTheme" /> control.
+            </summary>
+      <param name="prototype">Prototype.</param>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.TitleTheme.Day">
+      <summary>
+            Gets or sets day title style.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.TitleTheme.Weekend">
+      <summary>
+            Gets or sets Weekend title style.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.TitleTheme.Week">
+      <summary>
+            Gets or sets week title style.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.TitleTheme.Month">
+      <summary>
+            Gets or sets month title style.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.TitleTheme.Today">
+      <summary>
+            Gets or sets today caption style.
+            </summary>
+    </member>
+    <member name="M:C1.Win.Calendar.UI.TitleTheme.Reset">
+      <summary>
+            Reset all TitleTheme styles to default.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Calendar.UI.TodayCaptionStyle">
+      <summary>
+            The <see cref="T:C1.Win.Calendar.UI.TodayCaptionStyle" /> class contains display attributes that 
+            determine the appearance of <see cref="T:C1.Win.Calendar.C1CalendarView" /> today caption on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.TodayCaptionStyle.Font">
+      <summary>
+            Gets or sets text font of TodayCaption element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.TodayCaptionStyle.ForeColor">
+      <summary>
+            Gets or sets the <see cref="T:System.Drawing.Color" /> used to paint the text of TodayCaption element.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Calendar.UI.WeekTitleStyle">
+      <summary>
+            The <see cref="T:C1.Win.Calendar.UI.WeekTitleStyle" /> class contains display attributes that 
+            determine the appearance of <see cref="T:C1.Win.Calendar.C1CalendarView" /> week title on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.WeekTitleStyle.Font">
+      <summary>
+            Gets or sets text font of WeekTitle element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.WeekTitleStyle.ForeColor">
+      <summary>
+            Gets or sets the <see cref="T:System.Drawing.Color" /> used to paint the text of WeekTitle element.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Calendar.UI.DayTitleStyle">
+      <summary>
+            The <see cref="T:C1.Win.Calendar.UI.DayTitleStyle" /> class contains display attributes that 
+            determine the appearance of <see cref="T:C1.Win.Calendar.C1CalendarView" /> day title on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.DayTitleStyle.Font">
+      <summary>
+            Gets or sets text font of DayTitle element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.DayTitleStyle.ForeColor">
+      <summary>
+            Gets or sets the <see cref="T:System.Drawing.Color" /> used to paint the text of DayTitle element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.DayTitleStyle.BackImage">
+      <summary>
+            Gets or sets the background image for the DayTitle element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.DayTitleStyle.BackImageAlignment">
+      <summary>
+            Gets or sets the alignment used to render the background image of DayTitle element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.DayTitleStyle.BackImageScaling">
+      <summary>
+            Gets or sets the scaling used to render the background image of DayTitle element.
+            </summary>
+    </member>
+    <member name="T:C1.Win.Calendar.UI.MonthTitleStyle">
+      <summary>
+            The <see cref="T:C1.Win.Calendar.UI.MonthTitleStyle" /> class contains display attributes that 
+            determine the appearance of <see cref="T:C1.Win.Calendar.C1CalendarView" /> month title on the screen.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.MonthTitleStyle.Font">
+      <summary>
+            Gets or sets text font of MonthTitle element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.MonthTitleStyle.ForeColor">
+      <summary>
+            Gets or sets the <see cref="T:System.Drawing.Color" /> used to paint the text of MonthTitle element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.MonthTitleStyle.Trimming">
+      <summary>
+            Gets or sets how to trim characters that do not fit in the space available.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.MonthTitleStyle.BackImage">
+      <summary>
+            Gets or sets the background image for the MonthTitle element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.MonthTitleStyle.BackImageAlignment">
+      <summary>
+            Gets or sets the alignment used to render the background image of MonthTitle element.
+            </summary>
+    </member>
+    <member name="P:C1.Win.Calendar.UI.MonthTitleStyle.BackImageScaling">
+      <summary>
+            Gets or sets the scaling used to render the background image of MonthTitle element.
+            </summary>
+    </member>
+    <member name="T:C1.CalendarView.WorkDays">
+      <summary>
+            The <see cref="T:C1.CalendarView.WorkDays" /> class specifies work days for the single week.
+            </summary>
+    </member>
+    <member name="M:C1.CalendarView.WorkDays.#ctor">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.CalendarView.WorkDays" /> class.
+            </summary>
+    </member>
+    <member name="M:C1.CalendarView.WorkDays.#ctor(System.DayOfWeek[])">
+      <summary>
+            Initializes a new instance of the <see cref="T:C1.CalendarView.WorkDays" /> class.
+            </summary>
+      <param name="days">
+        <see cref="T:System.DayOfWeek" /> array of work days</param>
+    </member>
+    <member name="P:C1.CalendarView.WorkDays.Days">
+      <summary>
+            Gets list of <see cref="T:System.DayOfWeek" /> objects of work days.
+            </summary>
+    </member>
+    <member name="P:C1.CalendarView.WorkDays.Sunday">
+      <summary>
+            Indicates Sunday.
+            </summary>
+    </member>
+    <member name="M:C1.CalendarView.WorkDays.ShouldSerializeSunday">
+      <summary>
+            Indicates whether the <see cref="P:C1.CalendarView.WorkDays.Sunday" /> property should be persisted.
+            </summary>
+      <returns>
+        <see langword="true" /> if the <see cref="P:C1.CalendarView.WorkDays.Sunday" /> property value has been changed from its default; otherwise, <see langword="false" />.</returns>
+    </member>
+    <member name="M:C1.CalendarView.WorkDays.ResetSunday">
+      <summary>
+            Clears <see cref="P:C1.CalendarView.WorkDays.Sunday" />.
+            </summary>
+    </member>
+    <member name="P:C1.CalendarView.WorkDays.Saturday">
+      <summary>
+            Indicates Saturday.
+            </summary>
+    </member>
+    <member name="M:C1.CalendarView.WorkDays.ShouldSerializeSaturday">
+      <summary>
+            Indicates whether the <see cref="P:C1.CalendarView.WorkDays.Saturday" /> property should be persisted.
+            </summary>
+      <returns>
+        <see langword="true" /> if the <see cref="P:C1.CalendarView.WorkDays.Saturday" /> property value has been changed from its default; otherwise, <see langword="false" />.</returns>
+    </member>
+    <member name="M:C1.CalendarView.WorkDays.ResetSaturday">
+      <summary>
+            Clears <see cref="P:C1.CalendarView.WorkDays.Saturday" />.
+            </summary>
+    </member>
+    <member name="P:C1.CalendarView.WorkDays.Monday">
+      <summary>
+            Indicates Monday.
+            </summary>
+    </member>
+    <member name="M:C1.CalendarView.WorkDays.ShouldSerializeMonday">
+      <summary>
+            Indicates whether the <see cref="P:C1.CalendarView.WorkDays.Monday" /> property should be persisted.
+            </summary>
+      <returns>
+        <see langword="true" /> if the <see cref="P:C1.CalendarView.WorkDays.Monday" /> property value has been changed from its default; otherwise, <see langword="false" />.</returns>
+    </member>
+    <member name="M:C1.CalendarView.WorkDays.ResetMonday">
+      <summary>
+            Clears <see cref="P:C1.CalendarView.WorkDays.Monday" />.
+            </summary>
+    </member>
+    <member name="P:C1.CalendarView.WorkDays.Tuesday">
+      <summary>
+            Indicates Tuesday.
+            </summary>
+    </member>
+    <member name="M:C1.CalendarView.WorkDays.ShouldSerializeTuesday">
+      <summary>
+            Indicates whether the <see cref="P:C1.CalendarView.WorkDays.Tuesday" /> property should be persisted.
+            </summary>
+      <returns>
+        <see langword="true" /> if the <see cref="P:C1.CalendarView.WorkDays.Tuesday" /> property value has been changed from its default; otherwise, <see langword="false" />.</returns>
+    </member>
+    <member name="M:C1.CalendarView.WorkDays.ResetTuesday">
+      <summary>
+            Clears <see cref="P:C1.CalendarView.WorkDays.Tuesday" />.
+            </summary>
+    </member>
+    <member name="P:C1.CalendarView.WorkDays.Wednesday">
+      <summary>
+            Indicates Wednesday.
+            </summary>
+    </member>
+    <member name="M:C1.CalendarView.WorkDays.ShouldSerializeWednesday">
+      <summary>
+            Indicates whether the <see cref="P:C1.CalendarView.WorkDays.Wednesday" /> property should be persisted.
+            </summary>
+      <returns>
+        <see langword="true" /> if the <see cref="P:C1.CalendarView.WorkDays.Wednesday" /> property value has been changed from its default; otherwise, <see langword="false" />.</returns>
+    </member>
+    <member name="M:C1.CalendarView.WorkDays.ResetWednesday">
+      <summary>
+            Clears <see cref="P:C1.CalendarView.WorkDays.Wednesday" />.
+            </summary>
+    </member>
+    <member name="P:C1.CalendarView.WorkDays.Thursday">
+      <summary>
+            Indicates Thursday.
+            </summary>
+    </member>
+    <member name="M:C1.CalendarView.WorkDays.ShouldSerializeThursday">
+      <summary>
+            Indicates whether the <see cref="P:C1.CalendarView.WorkDays.Thursday" /> property should be persisted.
+            </summary>
+      <returns>
+        <see langword="true" /> if the <see cref="P:C1.CalendarView.WorkDays.Thursday" /> property value has been changed from its default; otherwise, <see langword="false" />.</returns>
+    </member>
+    <member name="M:C1.CalendarView.WorkDays.ResetThursday">
+      <summary>
+            Clears <see cref="P:C1.CalendarView.WorkDays.Thursday" />.
+            </summary>
+    </member>
+    <member name="P:C1.CalendarView.WorkDays.Friday">
+      <summary>
+            Indicates Friday.
+            </summary>
+    </member>
+    <member name="M:C1.CalendarView.WorkDays.ShouldSerializeFriday">
+      <summary>
+            Indicates whether the <see cref="P:C1.CalendarView.WorkDays.Friday" /> property should be persisted.
+            </summary>
+      <returns>
+        <see langword="true" /> if the <see cref="P:C1.CalendarView.WorkDays.Friday" /> property value has been changed from its default; otherwise, <see langword="false" />.</returns>
+    </member>
+    <member name="M:C1.CalendarView.WorkDays.ResetFriday">
+      <summary>
+            Clears <see cref="P:C1.CalendarView.WorkDays.Friday" />.
+            </summary>
+    </member>
+    <member name="M:C1.CalendarView.WorkDays.IsSelected(System.DayOfWeek)">
+      <summary>
+            Gets a value indicating whether specified day is selected as a work day.
+            </summary>
+      <param name="day">Specified <see cref="T:System.DayOfWeek" /> day.</param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:C1.CalendarView.WorkDays.SetDay(System.DayOfWeek,System.Boolean)">
+      <summary>
+            Sets the specified <see cref="T:System.DayOfWeek" /> day.
+            </summary>
+      <param name="day">specified <see cref="T:System.DayOfWeek" /> day.</param>
+      <param name="value">If true - set day as work day, if false - remove day from the work days.</param>
+    </member>
+    <member name="T:C1.CalendarView.Position">
+      <summary>
+            Value indicates position of element.
+            </summary>
+    </member>
+    <member name="F:C1.CalendarView.Position.Top">
+      <summary>
+            Top position.
+            </summary>
+    </member>
+    <member name="F:C1.CalendarView.Position.Bottom">
+      <summary>
+            Bottom position.
+            </summary>
+    </member>
+    <member name="F:C1.CalendarView.Position.Left">
+      <summary>
+            Left position.
+            </summary>
+    </member>
+    <member name="F:C1.CalendarView.Position.Right">
+      <summary>
+            Right position.
+            </summary>
+    </member>
+    <member name="T:C1.CalendarView.SelectionType">
+      <summary>
+            Selection type of value.
+            </summary>
+    </member>
+    <member name="F:C1.CalendarView.SelectionType.Field">
+      <summary>
+            Field appearance. Like TextBox.
+            </summary>
+    </member>
+    <member name="F:C1.CalendarView.SelectionType.List">
+      <summary>
+            Drop down list.
+            </summary>
+    </member>
+    <member name="T:C1.CalendarView.SelectionRule">
+      <summary>
+            Options for month navigation
+            </summary>
+    </member>
+    <member name="F:C1.CalendarView.SelectionRule.EnumerationNone">
+      <summary>
+            Keep selection while navigating.
+            </summary>
+    </member>
+    <member name="F:C1.CalendarView.SelectionRule.EnumerationSameDay">
+      <summary>
+            Move selection to the same days of manth while navigating.
+            </summary>
+    </member>
+    <member name="F:C1.CalendarView.SelectionRule.EnumerationFirstDay">
+      <summary>
+            Select first days of month while navigating.
+            </summary>
+    </member>
+    <member name="F:C1.CalendarView.SelectionRule.EnumerationLastDays">
+      <summary>
+            Select last days of month while navigating.
+            </summary>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "天秀酒店管理系统", "天秀酒店管理系统\天秀酒店管理系统.csproj", "{23329FB2-4EB0-49EC-BFC6-FA23BAD7B7C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23329FB2-4EB0-49EC-BFC6-FA23BAD7B7C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23329FB2-4EB0-49EC-BFC6-FA23BAD7B7C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23329FB2-4EB0-49EC-BFC6-FA23BAD7B7C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23329FB2-4EB0-49EC-BFC6-FA23BAD7B7C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1AAC2D66-95DF-41C0-9B08-2A27E9534F53}
+	EndGlobalSection
+EndGlobal

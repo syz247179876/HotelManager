@@ -1,0 +1,449 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>C1.Win.C1Schedule.Extended.4</name>
+    </assembly>
+    <members>
+        <member name="F:C1.Util.Licensing.VersionConst.VerString">
+            <summary>
+            WinForms version string representation (4 dot-delimited numbers).
+            </summary>
+        </member>
+        <member name="F:C1.Util.Licensing.VersionConst.VersionStr">
+            <summary>
+            Same as <see cref="F:C1.Util.Licensing.VersionConst.VerString"/>.
+            </summary>
+        </member>
+        <member name="F:C1.Util.Licensing.VersionConst.VerAsmName">
+            <summary>
+            For .NET 4.0 version only, used for designer assembly names.
+            </summary>
+        </member>
+        <member name="T:C1.Util.Licensing.AssemblyNames">
+            <summary>
+            Specifies assembly name parts, used by AssemblyCommonInfo to generate actual assembly names.
+            </summary>
+        </member>
+        <member name="T:C1.Win.C1Schedule.AgendaViewType">
+            <summary>
+            Determines view type for Agenda View.
+            </summary>
+        </member>
+        <member name="F:C1.Win.C1Schedule.AgendaViewType.Today">
+            <summary>
+            Show agenda for current day.
+            </summary>
+        </member>
+        <member name="F:C1.Win.C1Schedule.AgendaViewType.Week">
+            <summary>
+            Show agenda for next 7 days, starting from the current day.
+            </summary>
+        </member>
+        <member name="F:C1.Win.C1Schedule.AgendaViewType.DateRange">
+            <summary>
+            Show agenda for date range.
+            </summary>
+        </member>
+        <member name="T:C1.Win.C1Schedule.C1AgendaView">
+            <summary>
+            Represents a view that displays appointments grouped by date in a table, single row for appointment.
+            </summary>
+        </member>
+        <member name="M:C1.Win.C1Schedule.C1AgendaView.#ctor">
+            <summary>
+            Initializes the new instance of the <see cref="T:C1.Win.C1Schedule.C1AgendaView"/> class.
+            </summary>
+        </member>
+        <member name="P:C1.Win.C1Schedule.C1AgendaView.AllowDragging">
+            <summary>
+            Gets or sets whether the user is allowed to drag rows and columns with the mouse.
+            </summary>
+        </member>
+        <member name="P:C1.Win.C1Schedule.C1AgendaView.AllowFiltering">
+            <summary>
+            Gets or sets whether the user is allowed to filter the data.
+            </summary>
+        </member>
+        <member name="P:C1.Win.C1Schedule.C1AgendaView.ViewType">
+            <summary>
+            Specifies current view type.
+            </summary>
+        </member>
+        <member name="P:C1.Win.C1Schedule.C1AgendaView.ShowEmptyDays">
+            <summary>
+            Specifies whether days without events should be displayed.
+            </summary>
+        </member>
+        <member name="M:C1.Win.C1Schedule.C1AgendaView.OnOwnerDrawCell(C1.Win.C1FlexGrid.OwnerDrawCellEventArgs)">
+            <summary>
+            Draws an appointment in a cell.
+            </summary>
+            <param name="e">An <see cref="T:C1.Win.C1FlexGrid.OwnerDrawCellEventArgs"/> that contains data.</param>
+        </member>
+        <member name="M:C1.Win.C1Schedule.C1AgendaView.OnVisibleChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.VisibleChanged"/> event.
+            </summary>
+            <param name="e">A <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:C1.Win.C1Schedule.C1AgendaView.RefreshView">
+            <summary>
+            Refreshes the <see cref="T:C1.Win.C1Schedule.C1AgendaView"/> control.
+            </summary>
+        </member>
+        <member name="M:C1.Win.C1Schedule.C1AgendaView.OnFontChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.FontChanged"/> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:C1.Win.C1Schedule.C1AgendaView.OnKeyDown(System.Windows.Forms.KeyEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="T:C1.Win.C1Schedule.Extended.Localization.C1DescriptionAttribute">
+            <summary>
+            C1DescriptionAttribute replaces the DescriptionAttribute
+            and uses the StringsManager and Strings classes to
+            return the localized Attribute string.   
+            </summary>
+        </member>
+        <member name="T:C1.Win.C1Schedule.Extended.Localization.C1CategoryAttribute">
+            <summary>
+            C1CategoryAttribute replaces the CategoryAttribute
+            and uses the StringsManager and Strings classes to
+            return the localized Attribute string.
+            </summary>
+        </member>
+        <member name="T:C1.Win.C1Schedule.Extended.Localization.Strings">
+            <summary>
+            The <see cref="T:C1.Win.C1Schedule.Extended.Localization.Strings"/> class contains static properties used for localization.
+            </summary>
+        </member>
+        <member name="P:C1.Win.C1Schedule.Extended.Localization.Strings.ResourceManager">
+            <summary>
+            The <see cref="P:C1.Win.C1Schedule.Extended.Localization.Strings.ResourceManager"/> object used for lookup resources.
+            </summary>
+            <remarks>Set this property to the valid value if 
+            you define resources in a Custom Control assembly.</remarks>
+        </member>
+        <member name="P:C1.Win.C1Schedule.Extended.Localization.Strings.UICulture">
+            <summary>
+            Returns default <see cref="T:System.Globalization.CultureInfo"/> object used as fallback culture.
+            </summary>
+        </member>
+        <member name="T:C1.Win.C1Schedule.AppointmentField">
+            <summary>
+            The <see cref="T:C1.Win.C1Schedule.AppointmentField"/> class describes appointment fields which can be used in table views.
+            </summary>
+        </member>
+        <member name="P:C1.Win.C1Schedule.AppointmentField.Name">
+            <summary>
+            Gets field name.
+            </summary>
+        </member>
+        <member name="P:C1.Win.C1Schedule.AppointmentField.Hidden">
+            <summary>
+            Determines whether field can be shown and available for sorting, filtering and grouping operations. 
+            </summary>
+            <remarks>If this property is true, 
+            the <see cref="P:C1.Win.C1Schedule.AppointmentField.Visible"/>, <see cref="P:C1.Win.C1Schedule.AppointmentField.Sort"/>, <see cref="P:C1.Win.C1Schedule.AppointmentField.GroupIndex"/> and <see cref="P:C1.Win.C1Schedule.AppointmentField.Caption"/>
+            property values will be ignored and property change notifications won't be fired.</remarks>
+        </member>
+        <member name="P:C1.Win.C1Schedule.AppointmentField.DataType">
+            <summary>
+            Determines field data type.
+            </summary>
+        </member>
+        <member name="P:C1.Win.C1Schedule.AppointmentField.ReadOnly">
+            <summary>
+            Determines whether field should be editable by end-user.
+            </summary>
+        </member>
+        <member name="P:C1.Win.C1Schedule.AppointmentField.Visible">
+            <summary>
+            Determines whether field should be visible to end-user. 
+            </summary>
+        </member>
+        <member name="P:C1.Win.C1Schedule.AppointmentField.Sort">
+            <summary>
+            Determines field sort options. 
+            </summary>
+        </member>
+        <member name="P:C1.Win.C1Schedule.AppointmentField.GroupIndex">
+            <summary>
+            Specifies the column order according to which data is grouped. Values must be unique.
+            The default value is -1, which means no grouping by this field.
+            </summary>
+        </member>
+        <member name="P:C1.Win.C1Schedule.AppointmentField.Caption">
+            <summary>
+            Gets or sets the <see cref="T:System.String"/> value to display column caption for this field.
+            </summary>
+        </member>
+        <member name="E:C1.Win.C1Schedule.AppointmentField.PropertyChanged">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:C1.Win.C1Schedule.AppointmentField.OnPropertyChanged(System.String)">
+            <summary>
+            Fires property change notification.
+            </summary>
+            <param name="propertyName">The property name.</param>
+        </member>
+        <member name="T:C1.Win.C1Schedule.AppointmentFields">
+            <summary>
+            The <see cref="T:C1.Win.C1Schedule.AppointmentFields"/> dictionary contains all fields which can be used in a view.
+            </summary>
+        </member>
+        <member name="E:C1.Win.C1Schedule.AppointmentFields.FieldChanged">
+            <summary>
+            Fires when one of fields changes.
+            </summary>
+        </member>
+        <member name="M:C1.Win.C1Schedule.AppointmentFields.OnFieldChanged">
+            <summary>
+            Raises the <see cref="E:C1.Win.C1Schedule.AppointmentFields.FieldChanged"/> event.
+            </summary>
+        </member>
+        <member name="M:C1.Win.C1Schedule.AppointmentFields.GetFieldsForView">
+            <summary>
+            Returns dictionary of fields which should be used to display in view. This includes Id and all visible fields.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:C1.Win.C1Schedule.AppointmentFields.Serialize">
+            <summary>
+            Serializes the appointment fields collection in a XML string.
+            </summary>
+            <returns>Serialized appointment fields collection in XML format</returns>
+        </member>
+        <member name="M:C1.Win.C1Schedule.AppointmentFields.Deserialize(System.String)">
+            <summary>
+            Deserializes the appointment fields collection from a given XML string.
+            </summary>
+        </member>
+        <member name="T:C1.Win.C1Schedule.BaseTableView">
+            <summary>
+            Grid control used as a base for different table views.
+            </summary>
+        </member>
+        <member name="F:C1.Win.C1Schedule.BaseTableView.Icons">
+            <summary>
+            Icons to use in grids
+            </summary>
+        </member>
+        <member name="M:C1.Win.C1Schedule.BaseTableView.#ctor">
+            <summary>
+            Initializes the new instance of the <see cref="T:C1.Win.C1Schedule.BaseTableView"/> class.
+            </summary>
+        </member>
+        <member name="M:C1.Win.C1Schedule.BaseTableView.BeginInit">
+            <inheritdoc />
+        </member>
+        <member name="M:C1.Win.C1Schedule.BaseTableView.EndInit">
+            <inheritdoc />
+        </member>
+        <member name="P:C1.Win.C1Schedule.BaseTableView.Schedule">
+            <summary>
+            Gets or sets the <see cref="T:C1.Win.C1Schedule.C1Schedule"/> control which data should be reflected in the current view.
+            </summary>
+        </member>
+        <member name="M:C1.Win.C1Schedule.BaseTableView.RefreshView">
+            <summary>
+            Refreshes control.
+            </summary>
+        </member>
+        <member name="M:C1.Win.C1Schedule.BaseTableView.OnAppointmentAdded(C1.C1Schedule.AppointmentEventArgs)">
+            <summary>
+            Called when an <see cref="E:C1.Win.C1Schedule.C1Schedule.AppointmentAdded"/> event is occured.
+            </summary>
+            <param name="e">An <see cref="T:C1.C1Schedule.AppointmentEventArgs"/> event data.</param>
+        </member>
+        <member name="M:C1.Win.C1Schedule.BaseTableView.OnAppointmentDeleted(C1.C1Schedule.AppointmentEventArgs)">
+            <summary>
+            Called when an <see cref="E:C1.Win.C1Schedule.C1Schedule.AppointmentDeleted"/> event is occured.
+            </summary>
+            <param name="e">An <see cref="T:C1.C1Schedule.AppointmentEventArgs"/> event data.</param>
+        </member>
+        <member name="M:C1.Win.C1Schedule.BaseTableView.OnAppointmentChanged(C1.C1Schedule.AppointmentEventArgs)">
+            <summary>
+            Called when an <see cref="E:C1.Win.C1Schedule.C1Schedule.AppointmentChanged"/> event is occured.
+            </summary>
+            <param name="e">An <see cref="T:C1.C1Schedule.AppointmentEventArgs"/> event data.</param>
+        </member>
+        <member name="M:C1.Win.C1Schedule.BaseTableView.OnAppointmentsLoaded">
+            <summary>
+            Called when an <see cref="E:C1.Win.C1Schedule.C1Schedule.AppointmentsLoaded"/> event is occured.
+            </summary>
+        </member>
+        <member name="M:C1.Win.C1Schedule.BaseTableView.GetRowAppointment(System.Int32)">
+            <summary>
+            Returns the <see cref="T:C1.C1Schedule.Appointment"/> object associated with the specified FlexGrid row index in the current view.
+            </summary>
+            <param name="row">The row index.</param>
+            <returns>The <see cref="T:C1.C1Schedule.Appointment"/> object.</returns>
+        </member>
+        <member name="M:C1.Win.C1Schedule.BaseTableView.GetRowAppointment(System.Data.DataRow)">
+            <summary>
+            Returns the <see cref="T:C1.C1Schedule.Appointment"/> object associated with the specified row in the current view.
+            </summary>
+            <param name="row">The row index.</param>
+            <returns>The <see cref="T:C1.C1Schedule.Appointment"/> object.</returns>
+        </member>
+        <member name="P:C1.Win.C1Schedule.BaseTableView.SelectedAppointments">
+            <summary>
+            Gets the <see cref="T:System.Collections.Generic.List`1"/> object containing 
+            the list of the currently selected <see cref="T:C1.C1Schedule.Appointment"/> objects.
+            </summary>
+        </member>
+        <member name="E:C1.Win.C1Schedule.BaseTableView.SelectedAppointmentsChanged">
+            <summary>
+            Occurs when the list of selected appointments is changed.
+            </summary>
+        </member>
+        <member name="M:C1.Win.C1Schedule.BaseTableView.OnSelChange(System.EventArgs)">
+            <summary>
+            Fires after the selection changes.
+            </summary>
+            <param name="e">A <see cref="T:System.EventArgs"/> that contains event data.</param>
+        </member>
+        <member name="P:C1.Win.C1Schedule.BaseTableView.ContextMenuStrip">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:C1.Win.C1Schedule.BaseTableView.OnVisibleChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.VisibleChanged"/> event.
+            </summary>
+            <param name="e">A <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:C1.Win.C1Schedule.BaseTableView.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:C1.Win.C1Schedule.BaseTableView.OnVisualStyleChanged">
+            <inheritdoc />
+        </member>
+        <member name="M:C1.Win.C1Schedule.BaseTableView.OnBeforeDoubleClick(C1.Win.C1FlexGrid.BeforeMouseDownEventArgs)">
+            <summary>
+            Raises the <see cref="E:C1.Win.C1FlexGrid.C1FlexGridBase.BeforeDoubleClick"/> event.
+            </summary>
+            <param name="e">A <see cref="T:C1.Win.C1FlexGrid.BeforeMouseDownEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:C1.Win.C1Schedule.BaseTableView.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:C1.Win.C1Schedule.BaseTableView.OnKeyDown(System.Windows.Forms.KeyEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:C1.Win.C1Schedule.BaseTableView.OnBeforeThemeApplied(System.Object)">
+            <summary>
+            Called before new theme is Applied.
+            </summary>
+            <param name="newTheme">New theme object</param>
+        </member>
+        <member name="M:C1.Win.C1Schedule.BaseTableView.OnHandleCreated(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:C1.Win.C1Schedule.BaseTableView.OnHandleDestroyed(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:C1.Win.C1Schedule.BaseTableView.OnParentChanged(System.EventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:C1.Win.C1Schedule.BaseTableView.Dispose(System.Boolean)">
+            <summary>
+            Disposes of the resources (other than memory) used by the <see cref="T:C1.Win.C1Schedule.BaseTableView" />.
+            </summary>
+            <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+        </member>
+        <member name="P:C1.Win.C1Schedule.BaseTableView.Rows">
+            <summary>
+            Gets the collection of <see cref="T:C1.Win.C1FlexGrid.Row"/> objects in the grid.
+            </summary>
+        </member>
+        <member name="T:C1.Win.C1Schedule.C1TableView">
+            <summary>
+            Represents a view that displays appointments in a table, single row for appointment.
+            </summary>
+        </member>
+        <member name="M:C1.Win.C1Schedule.C1TableView.#ctor">
+            <summary>
+            Initializes the new instance of the <see cref="T:C1.Win.C1Schedule.C1TableView"/> class.
+            </summary>
+        </member>
+        <member name="M:C1.Win.C1Schedule.C1TableView.EndInit">
+            <summary>
+            Signals the object that initialization is complete.
+            </summary>
+        </member>
+        <member name="P:C1.Win.C1Schedule.C1TableView.Active">
+            <summary>
+            Gets or sets a <see cref="T:System.Boolean"/> value specifying whether this view should be filtered to only show active appointments.
+            </summary>
+        </member>
+        <member name="P:C1.Win.C1Schedule.C1TableView.Fields">
+            <summary>
+            Gets appointment fields.
+            </summary>
+        </member>
+        <member name="M:C1.Win.C1Schedule.C1TableView.ShouldSerializeFields">
+            <summary>
+            Determines if <see cref="P:C1.Win.C1Schedule.C1TableView.Fields"/> property should be serialized.
+            </summary>
+            <returns>True if <see cref="P:C1.Win.C1Schedule.C1TableView.Fields"/> property should be serialized.</returns>
+        </member>
+        <member name="P:C1.Win.C1Schedule.C1TableView.FieldsXml">
+            <summary>
+            For internal use.
+            </summary>
+        </member>
+        <member name="M:C1.Win.C1Schedule.C1TableView.ShouldSerializeFieldsXml">
+            <summary>
+            Determines if <see cref="P:C1.Win.C1Schedule.C1TableView.Fields"/> property should be serialized.
+            </summary>
+            <returns>True if <see cref="P:C1.Win.C1Schedule.C1TableView.Fields"/> property should be serialized.</returns>
+        </member>
+        <member name="M:C1.Win.C1Schedule.C1TableView.OnGridChanged(System.Object,C1.Win.C1FlexGrid.GridChangedEventArgs)">
+            <summary>
+            Raises the <see cref="E:C1.Win.C1FlexGrid.C1FlexGridBase.GridChanged"/> event.
+            </summary>
+            <param name="sender">Object raising the event.</param>
+            <param name="e">A <see cref="T:C1.Win.C1FlexGrid.GridChangedEventArgs"/> that contains event data.</param>
+        </member>
+        <member name="M:C1.Win.C1Schedule.C1TableView.OnAppointmentAdded(C1.C1Schedule.AppointmentEventArgs)">
+            <summary>
+            Adds appointment to the view.
+            </summary>
+            <param name="e">An <see cref="T:C1.C1Schedule.AppointmentEventArgs"/> that contains appointment.</param>
+        </member>
+        <member name="M:C1.Win.C1Schedule.C1TableView.OnAppointmentChanged(C1.C1Schedule.AppointmentEventArgs)">
+            <summary>
+            Sets appointment to the view.
+            </summary>
+            <param name="e">An <see cref="T:C1.C1Schedule.AppointmentEventArgs"/> that contains appointment.</param>
+        </member>
+        <member name="M:C1.Win.C1Schedule.C1TableView.OnAppointmentDeleted(C1.C1Schedule.AppointmentEventArgs)">
+            <summary>
+            Deletes appointment from the view.
+            </summary>
+            <param name="e">An <see cref="T:C1.C1Schedule.AppointmentEventArgs"/> that contains appointment.</param>
+        </member>
+        <member name="M:C1.Win.C1Schedule.C1TableView.OnAppointmentsLoaded">
+            <summary>
+            Loads appointments to the view.
+            </summary>
+        </member>
+        <member name="M:C1.Win.C1Schedule.C1TableView.OnValidateEdit(C1.Win.C1FlexGrid.ValidateEditEventArgs)">
+            <summary>
+            Validates appointment in the given in <see cref="T:C1.Win.C1FlexGrid.ValidateEditEventArgs"/> cell.
+            </summary>
+        </member>
+        <member name="M:C1.Win.C1Schedule.C1TableView.RefreshView">
+            <summary>
+            Refreshes <see cref="T:C1.Win.C1Schedule.C1TableView"/> control.
+            </summary>
+        </member>
+    </members>
+</doc>
