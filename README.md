@@ -40,7 +40,8 @@
 
 6.查看员工信息
 
+---
 首页展示：
 
-![images](https://django-blog-syz.oss-cn-shanghai.aliyuncs.com/c%23winform_page.png)
+![](https://django-blog-syz.oss-cn-shanghai.aliyuncs.com/c%23winform_page.png)
 
